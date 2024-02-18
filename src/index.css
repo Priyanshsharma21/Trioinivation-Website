@@ -248,6 +248,9 @@
   padding: 7rem 6rem;
   padding-bottom: 4rem;
 }
+.customBriefClass{
+  padding: 7rem 6rem;
+}
 
 .homeSectionCards{
   padding: 0rem 4rem;
@@ -311,6 +314,9 @@
 }
 
 .contactImg{
+  padding: 3rem 0px;
+}
+.contactSectionInfo{
   padding: 3rem 0px;
 }
 
@@ -406,6 +412,147 @@
 }
 
 
+/* career */
+.careerWorkWithUs{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.titleOpenRole{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+}
+.careerFont{
+  font-size: 1rem;
+  margin-left: 1;
+}
+.positionCard{
+  margin: 2rem 6rem;
+  padding: 1rem;
+}
+
+.openRoles{
+  margin-bottom: 6rem;
+  margin-top: 1rem;
+}
+
+.careerBtn{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+/* contact Us Section */
+.contactUsBG {
+  background-image: linear-gradient(to bottom, #7BABEDB2, #7BABEDB2), url("./assets/contactUsSectionBG.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  background-position: center center;
+  padding-top: 4rem;
+}
+
+.contactUsBGTitle{
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 40px;
+  color: white;
+  padding: 0px 25rem;
+}
+.contactUsBGDesc{
+  color: white;
+  font-size: 1rem;
+  line-height: 20px;
+  margin-top: 1rem;
+  font-weight: 400;
+  padding: 0px 7rem;
+}
+
+.contactInfoSecTitle{
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.contactInfoSecDesc{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.contactSecContact{
+  font-size: 20px;
+  color: white;
+  font-weight: 400;
+}
+
+.contactInfoBox{
+  padding: 2rem 2rem;
+}
+.contactSectionForm{
+  padding: 5rem 2rem;
+}
+
+.contactInfoBoxMain{
+  margin-top: 6rem;
+}
+.contactInfoBoxMain2{
+  margin-top: 6rem;
+}
+
+.alsoAvil{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.contactFormInfo{
+  padding: 0rem 6rem;
+  position: relative;
+  bottom: 10rem;
+}
+
+
+/* about Us */
+.aboutUsSecOneDesc{
+  padding: 0px 9rem;
+}
+.aboutUs{
+  padding: 5rem 0rem;
+}
+.aboutUsCard2,.aboutUsCard1{
+  padding: 2rem ;
+  border-radius: 1rem;
+}
+.aboutUsCardMain1{
+  right: 14rem;
+  top: 10rem;
+  z-index:50;
+}
+.aboutUsCardMain2{
+  left: 17rem;
+  top: 10rem;
+  z-index:50;
+}
+.aboutUsTitle{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.aboutUsDesc{
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: 1rem;
+}
 /* Mobile responsive */
 
 /*  XX-Large devices (larger desktops, 1400px and up) */
@@ -421,8 +568,41 @@
   .contactForm{
     margin-left: 2rem;
   }
+  .contactForm2{
+    margin-left: 0px;
+  }
   .contactImg{
     margin-left: 0rem;
+  }
+
+  .contactSectionInfo{
+    padding: 0rem 0px;
+  }
+  
+
+  .contactSectionInfo{
+    margin-left: 0px;
+  }
+
+  .contactUsBGTitle{
+    font-size: 2rem;
+    padding: 0px 5rem;
+  }
+  .contactUsBGDesc{
+    color: white;
+    padding: 0px 3rem;
+  }
+  .contactFormInfo{
+    padding: 0rem 6rem;
+    position: relative;
+    bottom: 8rem;
+  }
+
+  .aboutUsCardMain1{
+    top: 7rem;
+  }
+  .aboutUsCardMain2{
+    top: 7rem;
   }
 }
 
@@ -431,6 +611,32 @@
   .heroImg{
     right: 5rem;
   }
+  .aboutUsCardMain1{
+    right: 10rem;
+    top: 3rem;
+  }
+  .aboutUsCardMain2{
+    left: 12rem;
+    top: 3rem;
+  }
+  .careerColToDel{
+    display: none;
+  }
+  .careerDescMain{
+    padding: 0px 2rem;
+  }
+  .positionCard{
+    margin: 2rem 2rem;
+    padding: 1rem;
+  }
+
+  .contactInfoBoxMain{
+    margin-top: 3rem;
+  }
+  .contactInfoBoxMain2{
+    margin-top: 3rem;
+  }
+ 
   .infoCard{
     padding: 2rem 2rem;
   }
@@ -489,7 +695,10 @@
     padding: 0rem 0rem;
   }
   
-  
+  .careerWorkWithUs{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 
 
@@ -501,6 +710,44 @@
   .homeCardInfoLeaf{
     top: 0;
     left: 2rem;
+  }
+
+  .aboutUsImgCol{
+    display: none;
+  }
+
+  .aboutUsCard1{
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.7px);
+  -webkit-backdrop-filter: blur(11.7px);
+  }
+  .aboutUsCard2{
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.7px);
+    -webkit-backdrop-filter: blur(11.7px);
+    }
+    .aboutUsTitle{
+      color: white;
+    }
+    .aboutUsDesc{
+      color: rgb(221, 221, 221);
+    }
+  .aboutUsCardMain1{
+      position: static;
+    background-image: linear-gradient(to bottom, #000000b2, #00000023), url("./assets/aboutUs1.png");
+    background-size: cover;
+    background-position: center center;
+    padding: 1rem;
+  }
+  .aboutUsCardMain2{
+    position: static;
+    background-image: url("./assets/aboutUs2.png");
+    background-image: linear-gradient(to bottom, #000000b2, #00000023), url("./assets/aboutUs2.png");
+    background-size: cover;
+    background-position: center center;
+    padding: 1rem;
   }
 
   .contactImg{
@@ -530,6 +777,19 @@
   
   .navlinkMobile{
     font-size: 2rem;
+  }
+
+  .contactSectionInfo{
+    border-top-right-radius: 0.5rem;
+  }
+  .contactForm2{
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .contactFormInfo{
+    padding: 0rem 2rem;
+    position: relative;
+    bottom: 6rem;
   }
   
 }
@@ -572,12 +832,68 @@
     line-height: 40px;
     max-width: 80%;
   }
+  .careerInfo{
+    flex-direction: column;
+  }
+
+  .careerWorkWithUs{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  
+  .titleOpenRole{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+  }
+  .careerFont{
+    font-size: 12px;
+  }
+  
+  .careerBtn{
+    width: 80px;
+  }
+  .careerIcon{
+    display: none;
+  }
+
+ .contactUsBGTitle{
+  font-size: 1.5rem;
+  line-height: 30px;
+}
+
+  
 }
 
 @media (max-width: 576px) { 
   .infoCardTitle{
     font-size: 1.5rem;
     line-height: 40px;
+  }
+  .contactUsBGTitle{
+    line-height: 25px;
+    padding: 0px 1rem;
+  }
+  .contactUsBGDesc{
+    line-height: 20px;
+    margin-top: 1rem;
+    padding: 0px 1rem;
+  }
+  .contactUsBGDesc{
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 1rem;
+  }
+  .contactInfoSecTitle{
+    font-size: 1.5rem;
+  }
+  
+  .contactInfoSecDesc{
+    font-size: 14px;
+  }
+  .careerDescMain{
+    padding: 0px 1rem;
   }
   .infoCardDesc{
     padding-left: 0rem;
@@ -616,6 +932,14 @@
 
   .heroHeading2{
     margin-top: 0.6rem;
+  }
+
+  .aboutUsTitle{
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+  .aboutUsDesc{
+    font-size: 14px;
   }
 
 
@@ -664,6 +988,10 @@
   
   .homeSectionCards{
     padding: 0rem 0rem;
+  }
+
+  .careerColDeptDel{
+    display: none;
   }
   
   .subHeading2{
@@ -714,19 +1042,6 @@
     font-weight: 400;
   }
 
-
-
-
-
-  /* 
-  
-  .contactImg{
-    padding: 3rem 0px;
-  }
-   */
-  /* 
-   */
-
    .contactBox{
     margin: 0rem 0rem;
     border-radius: 8px;
@@ -734,6 +1049,12 @@
    .contactForm{
     padding: 3rem 0px;
     padding-right: 2rem;
+  }
+  .contactForm2{
+    padding: 3rem 1rem;
+  }
+  .contactInfoBox{
+    padding: 2rem 1rem;
   }
   .contactFormTitle{
     margin-top: 1rem;
@@ -779,9 +1100,38 @@
     width: 60px;
   }
   
+  .careerWorkWithUs{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
   
+  .titleOpenRole{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+  }
+  .careerFont{
+    font-size: 12px;
+  }
   
+  .careerBtn{
+    width: 60px;
+  }
   
+  .positionCard{
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .contactSecContact{
+    font-size: 1rem;
+  }
+
+  .contactFormInfo{
+    padding: 0rem 1rem;
+    bottom: 7rem;
+  }
 }
 
 
@@ -794,6 +1144,10 @@
   .contactForm{
     padding-right: 1rem;
     margin-left: 1rem;
+  }
+  .contactForm2{
+    padding-right: 1rem;
+    margin-left: 0rem;
   }
   .homeStripe{
     padding: 1rem;
@@ -834,6 +1188,9 @@
     background: #E7EDF6;
     border: 2px solid #E7EDF6;
   }
-  
+  .contactUsBGTitle{
+    font-size: 1rem;
+    line-height: 22px;
+  }
 
 }

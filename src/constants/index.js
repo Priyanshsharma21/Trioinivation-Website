@@ -101,3 +101,49 @@ export const homeCoreValuesCards = [
         description : "Collaboration fuels our success. We believe in the power of teamwork and cooperation, leveraging the diverse strengths and perspectives of our team to achieve common goals. We foster an inclusive and supportive environment where everyone's contributions are valued, and we actively seek opportunities to collaborate with clients, partners, and communities for shared success."
     },
 ]
+
+export const careerBenefitsCards = [
+    {
+        sr : "01",
+        title : "Competitive Compensation",
+        description : "We offer competitive salaries and performance-based incentives to recognize and reward your contributions. Your hard work and dedication are valued and rewarded accordingly."
+    },
+    {
+        sr : "02",
+        title : "Work-Life Balance",
+        description : "We understand the importance of maintaining a healthy work-life balance. That's why we offer flexible work arrangements, paid time off, and remote work options to help you manage your personal and professional commitments."
+    },
+    {
+        sr : "03",
+        title : "Professional Growth",
+        description : `We are committed to helping you grow and develop professionally. Through mentorship programs, training opportunities, and career advancement paths, we empower you to reach your full potential and achieve your career goals.
+        Join us and enjoy these benefits and more as part of our dynamic team. Explore our current openings and take the next step in your career with Trioinovations.`
+    },
+]
+
+
+export const openRolesCardData = [
+    {
+        title : "Frontend Developer",
+        position : "Intern",
+        department : "Software Team",
+    },
+
+    {
+        title : "Backend Developer",
+        position : "Intern",
+        department : "Software Team",
+    },
+
+    {
+        title : "Video Editor",
+        position : "Full Time",
+        department : "Content Team",
+    },
+
+    {
+        title : "UI/UX",
+        position : "Full Time",
+        department : "Designer",
+    },
+]

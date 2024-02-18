@@ -19,6 +19,14 @@ import homeUnderline from './homeUnderline.png'
 import contactImg from './contactImg.png'
 import contactCardDesign from './contactCardDesign.png'
 import homeInfoCardLeaf from './homeInfoCardLeaf.png'
+import careerInfoCardLeaf from './careerInfoCardLeaf.png'
+import career1 from './career1.png'
+import career2 from './career2.png'
+import career3 from './career3.png'
+import career4 from './career4.png'
+import contactUsSectionBG from './contactUsSectionBG.jpg'
+import aboutUs1 from './aboutUs1.png'
+import aboutUs2 from './aboutUs2.png'
 
 
 export {
@@ -42,5 +50,13 @@ export {
     homeUnderline,
     contactImg,
     contactCardDesign,
-    homeInfoCardLeaf
+    homeInfoCardLeaf,
+    careerInfoCardLeaf,
+    career1,
+    career2,
+    career3,
+    career4,
+    contactUsSectionBG,
+    aboutUs1,
+    aboutUs2
 }

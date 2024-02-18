@@ -1,10 +1,11 @@
 import React from 'react'
-import { HeroBanner, InformationCard } from '../components';
+import { BriefInfoSection, HeroBanner, InformationCard } from '../components';
 import { homeInfoCardLeaf, homeUnderline, home_herobg } from '../assets';
 import { Col, Row } from 'antd';
 import { IoIosArrowForward } from "react-icons/io";
 import { homeCoreValuesCards, homeServiceCards } from '../constants';
 import { Link } from 'react-router-dom';
+import ContactUsSection from '../components/ContactUsSection';
 
 const Home = () => {
   return (
@@ -21,29 +22,12 @@ const Home = () => {
         *On our way to provide professional services*
       </div>
 
-      <section className='homeWhoRV'>
-        <Row>
-          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
-            <div className="flex flex-col">
-              <div>
-                <div className="whorv text-[#41AE6A]">Who we are</div>
-                <img src={homeUnderline} alt="underline" />
-              </div>
-              <div className='homeHead2 font-normal text-black'>
-                Transforming your Business with Digital & IT Solutions
-              </div>
-              <div className='subHeading2'>
-                Trioinovations excels in holistic Digital Transformation, offering cutting-edge websites, robust front-end/back-end solutions, seamless cloud integration, and innovative app development.
-              </div>
-            </div>
-          </Col>
-          <Col xl={12} lg={12} md={24} sm={24} xs={24}>
-              <div className='subHeading2'>
-                Our expertise extends to Automation, enhancing efficiency in business processes. In Digital Marketing, we navigate with precision, providing SEO mastery, compelling social media ads, captivating video creation, and striking graphics design. As a strategic partner, we propel brands to new heights. In talent acquisition, Trioinovations stands out with Recruitment Upsurge services, matching top-tier professionals to augment your workforce. We deliver transformative solutions, captivate audiences, and elevate businesses with a dedicated team committed to success in the digital era. Join us on a journey of innovation and growth.
-              </div>
-          </Col>
-        </Row>
-      </section>
+      <BriefInfoSection
+      title={"Who we are"}
+      titleMain={`Transforming your Business with Digital & IT Solutions`}
+      description1={"Trioinovations excels in holistic Digital Transformation, offering cutting-edge websites, robust front-end/back-end solutions, seamless cloud integration, and innovative app development."}
+      description2={"Our expertise extends to Automation, enhancing efficiency in business processes. In Digital Marketing, we navigate with precision, providing SEO mastery, compelling social media ads, captivating video creation, and striking graphics design. As a strategic partner, we propel brands to new heights. In talent acquisition, Trioinovations stands out with Recruitment Upsurge services, matching top-tier professionals to augment your workforce. We deliver transformative solutions, captivate audiences, and elevate businesses with a dedicated team committed to success in the digital era. Join us on a journey of innovation and growth."}
+       />
 
       <section className='homeSectionCards'>
         <Row>
@@ -77,6 +61,10 @@ const Home = () => {
           bgCol={"#EEFBF2"}
           leafImg={homeInfoCardLeaf}
         />
+      </section>
+
+      <section className="homeContactUs">
+        <ContactUsSection />
       </section>
     </div>
   )

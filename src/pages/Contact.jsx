@@ -56,7 +56,7 @@ const Contact = () => {
                       <Input className="formInputContact p-2" name="email" type="email" placeholder="Your email" onChange={handleChange} />
                       <Input.TextArea className="formInputContact contactTextArea p-2" name="message" placeholder="Type your query here" onChange={handleChange} />
                       <Button className="btnContactSubmit contactButton heroBtnText font-semibold flex items-center bg-[#41AE6A] hover:text-white hover:bg-[#50c17b] text-white"type="primary" htmlType="submit">SEND</Button>
-                </Form>
+                  </Form>
                 </div>
               </Col>
             </Row>
