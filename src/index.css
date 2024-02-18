@@ -2,8 +2,838 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bad+Script&family=Bangers&family=Barlow:wght@300;400&family=Baskervville&family=Bebas+Neue&family=Cabin+Sketch:wght@400;700&family=Castoro&family=Cinzel:wght@500;600;700&family=Comfortaa:wght@400;500&family=Dosis:wght@300;400&family=Fredoka:wght@300&family=Gloria+Hallelujah&family=Halant:wght@300&family=IBM+Plex+Sans:wght@100;200;300;500&family=Inter:wght@400;500;600&family=Josefin+Sans:ital,wght@0,200;0,500;1,100&family=Lato&family=Libre+Baskerville&family=Lobster&family=M+PLUS+1:wght@200&family=Marcellus+SC&family=Maven+Pro:wght@500;600&family=Montserrat+Alternates:wght@100&family=Montserrat:wght@100;400&family=Mukta:wght@200&family=Nanum+Gothic:wght@700&family=News+Cycle&family=Newsreader:opsz,wght@6..72,200;6..72,400&family=Noto+Sans&family=Nunito+Sans&family=Open+Sans:wght@400;500&family=Oswald&family=PT+Sans+Narrow:wght@400;700&family=Phudu:wght@300;400&family=Playfair+Display:wght@500;900&family=Plus+Jakarta+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Prompt&family=Quicksand:wght@300;400&family=Raleway:ital,wght@0,200;0,500;1,400&family=Readex+Pro:wght@600&family=Reem+Kufi+Fun:wght@400;500&family=Roboto+Slab:wght@400;500&family=Roboto:ital,wght@0,100;1,100;1,400&family=Rubik+Vinyl&family=Sarabun:wght@200&family=Satisfy&family=Signika:wght@300&family=Source+Code+Pro:wght@300;700&family=Syncopate:wght@400;700&family=Tajawal&family=Ubuntu:ital,wght@0,300;1,700&family=Varela+Round&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background: #E7EDF6;
+}
+::-webkit-scrollbar-thumb{
+  background: #50c17b65;
+  border-radius: 10rem;
+}
+
+/* loading animaiton style  */
+.loader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 180px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+
+/* Hero Banner Styles */
+.heroHeading{
+  font-size: 2.5rem;
+  font-weight: 600;
+  max-width: 55%;
+}
+
+.heroHeading2{
+  max-width: 70%;
+  margin-top: 0.5rem;
+}
+
+.subHeading{
+  font-size: 1rem;
+  font-weight: 200;
+  max-width: 50%;
+  color: #737373;
+}
+
+.contactButton,.heroLearnMore{
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s linear;
+}
+
+.contactButton:active,.heroLearnMore:active{
+  transform: scale(0.9);
+}
+.heroContent{
+  margin-left: 6rem;
+  margin-top: 6rem;
+}
+
+.contactButton,.heroLearnMore{
+  transition: all 0.2s linear;
+}
+
+.heroImg{
+  right: 15rem;
+  bottom: 0rem;
+}
+
+.websiteHeroArrow{
+  right: 2.5rem;
+}
+
+
+/* Navbar style */
+.navbar{
+  position: fixed;
+  z-index: 100;
+  top:1.6rem;
+  width: 80%;
+}
+
+.navLinks{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.showDraw{
+  display: none;
+}
+
+
+.heroNavigationText{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #979797;
+  margin-top: 2rem;
+}
+
+.heroNavigation{
+  font-size: 1rem;
+  font-weight: 400;
+  color: #979797;
+  margin-top: 15rem;
+}
+
+
+.desktopNavDrop{
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.navDropTitle{
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-left: 2rem;
+}
+
+.dropNavItem{
+  font-size: 16px;
+  margin-top: 0.8rem;
+  margin-left: 3rem;
+}
+
+.navbarMobileDrawer{
+  background-image: url(./assets/home_pattern.png) !important;
+  background-size: cover !important;
+}
+
+.demo{
+  color: #ffffff00;
+}
+.ant-menu,.ant-menu-submenu-title{
+  background: transparent !important;
+}
+
+.ant-menu-submenu-title{
+  padding-left: 4px !important;
+}
+
+.ant-menu-item{
+  padding-left: 0.8rem !important;
+}
+
+.ant-menu-item{
+  color: rgb(31, 31, 31) !important;
+  font-size: 1rem;
+}
+
+
+
+/* footer  */
+.footer{
+  background-image: url(./assets/footerPattern.png) !important;
+  background-size: cover !important;
+  padding: 3rem 6rem;
+}
+
+.footerLogoImg{
+  width: 250px;
+}
+
+.footerDescription{
+  font-size: 14px;
+  font-weight:400;
+  line-height: 20px;
+  margin-top: 0.5rem;
+  color: #737373;
+  padding-right: 6rem;
+}
+
+.footerItemTextSocialMedia{
+  font-size: 12px;
+}
+
+.footerInputStyle{
+  width: 300px;
+}
+
+.footerSubmitBtn{
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerBottomText{
+  font-size: 14px;
+}
+
+.footerSubsPattern{
+  left: 8rem;
+  top: 1.8rem;
+}
+
+
+.footerInputStyle{
+  margin-top: 2rem;
+}
+
+
+/* home */
+.homeStripe{
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.homeWhoRV{
+  padding: 7rem 6rem;
+  padding-bottom: 4rem;
+}
+
+.homeSectionCards{
+  padding: 0rem 4rem;
+  padding-bottom: 6rem;
+}
+
+.subHeading2{
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 20px;
+  color: #737373;
+  margin-top: 1rem;
+  padding-right: 2rem;
+}
+.homeHead2{
+  font-size: 2rem;
+  line-height: 40px;
+  max-width: 60%;
+}
+
+.whorv{
+  font-size: 1rem;
+}
+
+.homeCard{
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  margin: 2rem;
+}
+
+.homeCard:hover > div{
+  color: white;
+}
+
+.homeCard:hover .homeCardIcon{
+  color: #1D274E;
+}
+
+.homeCardTitle{
+  font-size: 18px;
+  font-weight: 500;
+}
+.homeCardDesc{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.homeCardIcon{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+/* contact */
+.contactBox{
+  margin: 4rem 6rem;
+  border-radius: 8px;
+}
+
+.contactImg{
+  padding: 3rem 0px;
+}
+
+.contactForm{
+  padding: 3rem 0px;
+  padding-right: 2rem;
+}
+
+.contactFormTitle{
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.contactDesc{
+  margin-top: 2rem;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contactTextArea{
+  height: 175px !important;
+}
+
+.formContact{
+  margin-top: 1rem;
+}
+.btnContactSubmit{
+  margin-top: 1rem;
+}
+.formInputContact{
+  margin-top: 1rem;
+}
+
+.contactCards{
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 0px 12px 2px #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  font-size: 20px;
+  width: 350px;
+  padding-bottom: 2rem;
+}
+
+.cardImg{
+  position: absolute;
+  right: 10px;
+  bottom: 0px;
+}
+
+
+/* InfoCard */
+.infoCard{
+  padding: 2rem 6rem;
+}
+.infoCardTitle{
+  font-size: 2rem;
+  line-height: 40px;
+}
+.homeCardInfoLeaf{
+  top: 0;
+  left: 14rem;
+}
+.infoCardDesc{
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.infoCardMainSr{
+  font-size: 2.5rem;
+}
+.infoCardMainTitle{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.infoCardMainDesc{
+  font-size: 14px;
+  padding-right: 1rem;
+  line-height: 20px;
+}
+
+.infoCardSection{
+  margin-top: 3rem;
+}
+
+.infoCardCol{
+  margin-left:3rem;
+}
+
+
+/* Mobile responsive */
+
+/*  XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) { 
+  .heroImg{
+    width: 45%;
+  }
+
+  .contactBox{
+    margin: 4rem 2rem;
+    border-radius: 8px;
+  }
+  .contactForm{
+    margin-left: 2rem;
+  }
+  .contactImg{
+    margin-left: 0rem;
+  }
+}
+
+/*  X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) { 
+  .heroImg{
+    right: 5rem;
+  }
+  .infoCard{
+    padding: 2rem 2rem;
+  }
+  .infoCardCol{
+    margin-left:0rem;
+    border: none !important;
+    margin-top: 2rem;
+  }
+  .infoCardSection{
+    margin-top: 2rem;
+  }
+  .heroHeading{
+    font-size: 2.5rem;
+    font-weight: 600;
+    max-width: 75%;
+  }
+
+  .heroNavigation{
+    margin-top: 12rem;
+  }
+  
+  .subHeading{
+    font-weight: 200;
+    max-width: 70%;
+  }
+
+  .heroContent{
+    margin-left: 4rem;
+    margin-top: 6rem;
+  }
+
+  .navbar{
+    position: fixed;
+    z-index: 100;
+    top:0rem;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .footer{
+    padding: 3rem 2rem;
+  }
+  
+  .footerDescription{
+    margin-top: 0rem;
+    color: #737373;
+    padding-right: 4rem;
+  }
+
+  .homeWhoRV{
+    padding: 5rem 2rem;
+    padding-bottom: 4rem;
+  }
+  
+  .homeSectionCards{
+    padding: 0rem 0rem;
+  }
+  
+  
+}
+
+
+/*  Large devices (desktops, 992px and up) */
+@media (max-width: 992px) { 
+  .footer{
+    padding: 1rem 2rem;
+  }
+  .homeCardInfoLeaf{
+    top: 0;
+    left: 2rem;
+  }
+
+  .contactImg{
+    display: none;
+  }
+
+  .footerLinks,.footersection3{
+    margin-top: 3rem;
+  }
+
+  .footerSubsPattern{
+    left: 8rem;
+    top: 4.8rem;
+  }
+  
+  .heroImg{
+    right: 3rem;
+  }
+  
+  .contact,.navLinks{
+    display: none;
+  }
+
+  .showDraw{
+    display: block;
+  }
+  
+  .navlinkMobile{
+    font-size: 2rem;
+  }
+  
+}
+
+
+/*  Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) { 
+  .heroContent{
+    margin-left: 2rem;
+    margin-top: 4rem;
+  }
+
+  .infoCardDesc{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .homeCardInfoLeaf{
+    width:200px ;
+  }
+
+  .websiteHeroArrow{
+    width: 10%;
+    right: 1rem;
+  }
+  .heroNavigation{
+    margin-top: 10rem;
+  }
+  .heroNavigationText{
+    margin-top: 1rem;
+  }
+
+  .homeStripe{
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .homeHead2{
+    font-size: 2rem;
+    line-height: 40px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 576px) { 
+  .infoCardTitle{
+    font-size: 1.5rem;
+    line-height: 40px;
+  }
+  .infoCardDesc{
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .infoCard{
+    padding: 2rem 1rem;
+  }
+  .heroContent{
+    margin-left: 1rem;
+    margin-top: 6rem;
+  }
+  .footer{
+    padding: 1rem 1rem;
+  }
+  .heroHeading{
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 90%;
+  }
+  .heroImg{
+    width: 65%;
+  }
+  
+  .subHeading{
+    font-weight: 200;
+    max-width: 90%;
+  }
+
+  .websiteHeroArrow{
+    right: 0.5rem;
+  }
+  .navlinkMobile{
+    font-size: 1.5rem;
+  }
+
+  .heroHeading2{
+    margin-top: 0.6rem;
+  }
+
+
+  .footer{
+    padding: 1rem 1rem;
+  }
+  
+  .footerLogoImg{
+    width: 180px;
+  }
+  
+  .footerDescription{
+    padding-right: 0rem;
+  }
+
+  .footerInputStyle{
+    width: 90%;
+  }
+  
+  .footerSubmitBtn{
+    width: 80px;
+  }
+  
+  .footerBottomText{
+    font-size: 10px;
+  }
+
+  .subsToNewsletter{
+    width: 150px;
+  }
+
+  .footerSubsPattern{
+    left: 6.2rem;
+    top: 4.7rem;
+    width: 15px;
+  }
+
+  .footerInputStyle{
+    margin-top: 1.2rem;
+  }
+
+  .homeWhoRV{
+    padding: 3rem 1rem;
+    padding-bottom: 4rem;
+  }
+  
+  .homeSectionCards{
+    padding: 0rem 0rem;
+  }
+  
+  .subHeading2{
+    font-size: 14px;
+    color: #737373;
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+  }
+  .homeHead2{
+    font-size: 1.5rem;
+    line-height: 30px;
+    max-width: 90%;
+    margin-top: 1rem;
+  }
+  
+  .whorv{
+    font-size: 1rem;
+  }
+  
+  .homeCard{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+    margin: 1rem;
+  }
+  
+  .homeCard:hover > div{
+    color: white;
+  }
+  
+  .homeCard:hover .homeCardIcon{
+    color: #1D274E;
+  }
+  
+  .homeCardTitle{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .homeCardDesc{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  
+  .homeCardIcon{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+
+
+
+
+  /* 
+  
+  .contactImg{
+    padding: 3rem 0px;
+  }
+   */
+  /* 
+   */
+
+   .contactBox{
+    margin: 0rem 0rem;
+    border-radius: 8px;
+  }
+   .contactForm{
+    padding: 3rem 0px;
+    padding-right: 2rem;
+  }
+  .contactFormTitle{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .contactDesc{
+    margin-top: 2rem;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .contactTextArea{
+    height: 175px !important;
+  }
+  
+  .formContact{
+    margin-top: 1rem;
+  }
+  .btnContactSubmit{
+    margin-top: 1rem;
+  }
+  .formInputContact{
+    margin-top: 1rem;
+  }
+  
+  .contactCards{
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 0px 12px 2px #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    font-size: 16px;
+    width: 250px;
+    padding-bottom: 2rem;
+  }
+  
+  .cardImg{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    width: 60px;
+  }
+  
+  
+  
+  
+}
+
+
+@media (max-width: 400px) { 
+  .heroHeading{
+    font-size: 1.5rem;
+    font-weight: 600;
+    max-width: 90%;
+  }
+  .contactForm{
+    padding-right: 1rem;
+    margin-left: 1rem;
+  }
+  .homeStripe{
+    padding: 1rem;
+    font-size: 14px;
+  }
+  .heroContent{
+    margin-left: 1rem;
+    margin-top: 7rem;
+  }
+  .heroBtnText{
+    font-size: 10px;
+  }
+  .subHeading{
+    font-size: 12px;
+    font-weight: 200;
+    max-width: 90%;
+  }
+  .heroNavigation{
+    font-size: 12px;
+  }
+  .heroNavigationText{
+    font-size: 16px;
+  }
+  .heroImg{
+    width: 90%;
+    right: 0px;
+  }
+  .heroLearnMore{
+    margin-left: 12px;
+  }
+  
+  .contactButton,.heroLearnMore{
+    font-weight: 600;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.4rem;
+  }
+  .heroLearnMore{
+    background: #E7EDF6;
+    border: 2px solid #E7EDF6;
+  }
+  
+
 }

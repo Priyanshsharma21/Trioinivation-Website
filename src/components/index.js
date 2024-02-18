@@ -1,6 +1,11 @@
 import Navbar from "./Navbar";
-
+import PreLoader from './PreLoader';
+import HeroBanner from './HeroBanner'
+import InformationCard from './InformationCard'
 
 export {
-    Navbar
+    Navbar,
+    PreLoader,
+    HeroBanner,
+    InformationCard
 }
