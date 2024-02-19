@@ -35,7 +35,7 @@ const About = () => {
         <section className="aboutUsSec2">
           <div>
             <Row>
-              <Col xl={14} lg={12} md={24} sm={24} xs={24} className=' aboutUsImgCol'>
+              <Col xl={14} lg={12} md={24} sm={24} xs={24} className='aboutUsImgCol'>
                 <div className="w-full flex justify-left">
                   <img src={aboutUs1} alt="aboutUs1" />
                 </div>

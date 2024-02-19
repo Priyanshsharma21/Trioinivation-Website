@@ -1,9 +1,9 @@
 import React from 'react'
-import { BriefInfoSection, HeroBanner, InformationCard } from '../components';
+import { BlogCards, BriefInfoSection, HeroBanner, InformationCard } from '../components';
 import { homeInfoCardLeaf, homeUnderline, home_herobg } from '../assets';
 import { Col, Row } from 'antd';
 import { IoIosArrowForward } from "react-icons/io";
-import { homeCoreValuesCards, homeServiceCards } from '../constants';
+import { blogLists, homeCoreValuesCards, homeServiceCards } from '../constants';
 import { Link } from 'react-router-dom';
 import ContactUsSection from '../components/ContactUsSection';
 
@@ -66,6 +66,25 @@ const Home = () => {
       <section className="homeContactUs">
         <ContactUsSection />
       </section>
+
+      <section className="aboutUs homeAboutUsBlog">
+          <div className="careerInfo flex flex-col items-center">
+                <div className='flex w-full flex-col items-center'>
+                  <div className="whorv text-[#41AE6A]">OUR LATEST BLOG</div>
+                  <img src={homeUnderline} alt="underline" />
+                </div>
+                <div className='homeHead2 font-normal mt-4 text-black text-center'>
+                  Our Latest blogs and news
+                </div>
+                <div className='subHeading2 mt-4 aboutUsSecOneDesc careerDescMain text-center'>
+                  Stay updated with our latest insights, news, and stories. Explore a wide range of topics in technology, digital marketing, design, AI, and more. Dive into our blog to discover valuable insights, trends, and tips that can help you stay ahead in the ever-evolving digital landscape.                
+                </div>
+            </div>
+
+            <div className="homeBlog">
+              <BlogCards blogs={blogLists.slice(0,3)}/>
+            </div>
+        </section>
     </div>
   )
 }

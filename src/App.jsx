@@ -11,6 +11,7 @@ import {  Home,
   DigitalTransformation,
   DigitalMarketing } from './pages';
 import Footer from './components/Footer';
+import { FloatButton } from 'antd';
 
 const App = () => {
   const [preLoader, setPreLoader] = useState(true)
@@ -54,6 +55,8 @@ const App = () => {
           <Footer />
         </div>
       )}
+
+      <FloatButton.BackTop visibilityHeight={0} />
     </div>
   )
 }

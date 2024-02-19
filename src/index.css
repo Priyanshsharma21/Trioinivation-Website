@@ -528,6 +528,9 @@
 .aboutUs{
   padding: 5rem 0rem;
 }
+.homeAboutUsBlog{
+  padding: 0rem 0rem;
+}
 .aboutUsCard2,.aboutUsCard1{
   padding: 2rem ;
   border-radius: 1rem;
@@ -553,6 +556,172 @@
   line-height: 24px;
   margin-top: 1rem;
 }
+
+
+/* blog */
+
+.latestBlog{
+  padding: 3rem 7rem;
+}
+
+.blogLatestHeading{
+  font-size: 2rem;
+  line-height: 40px;
+  margin-top: 2rem;
+}
+
+.blogLatestHeading2{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 1rem;
+}
+
+
+.blogLatestImg{
+  margin-top: 1rem;
+  width: 90%;
+  height: 70%;
+}
+
+.blogLatestImage{
+  object-fit: cover;
+}
+
+.goodReadTime{
+  font-size: 1rem;
+}
+
+.domainBubble{
+  width: max-content;
+}
+
+.blogDescLatest{
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 0.5rem;
+}
+
+.latestBlogContent{
+  padding: 5.5rem 0px;
+}
+
+
+
+
+
+
+
+
+
+
+/* blog cards */
+.blogCardTop{
+  padding: 0px 7rem;
+}
+.blogTitleText{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 40px;
+  color: #262626;
+}
+
+.blogCategoryText{
+  font-size: 1rem;
+}
+
+.blogCards{
+  margin-top: 4rem;
+}
+
+.serviceCards{
+  margin-top: 0rem;
+}
+
+.bannerBlogCard{
+  height: 200px;
+}
+
+.blogCards{
+  padding: 0px 7rem;
+  margin-bottom: 6rem;
+}
+
+.blogCardMain{
+  margin-top: 2rem;
+}
+
+.blogCatTitle{
+  display: block;
+}
+.blogCatIcon{
+  display: none;
+}
+
+
+
+
+/* blog details */
+.blogDetails{
+  padding: 9rem 7rem;
+}
+.blogDetailsTitle{
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 40px;
+  color: #262626;
+}
+
+.blogDetailsBanner{
+  height: 400px;
+  margin-top: 2rem;
+}
+
+.blogItemTitle{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #262626;
+  margin-top: 2rem;
+}
+.blogItemDesc{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #737373;
+  margin-top: 1rem;
+}
+
+
+
+/* service */
+.serviceBannerCol{
+  margin-top: 4rem;
+}
+.serviceBanner{
+  height: 200px;
+}
+.serviceTitle{
+  font-size: 2rem;
+  line-height: 40px;
+  margin-top: 1rem;
+}
+
+.arrowTransform{
+  transform: rotate(45deg);
+}
+
+.serviceDesc{
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 1rem;
+}
+
+
+.homeBlog{
+  padding: 2rem 7rem;
+}
+
 /* Mobile responsive */
 
 /*  XX-Large devices (larger desktops, 1400px and up) */
@@ -611,9 +780,24 @@
   .heroImg{
     right: 5rem;
   }
+  .blogDetails{
+    padding: 7rem 2rem;
+  }
+  .homeBlog{
+    padding: 2rem 2rem;
+  }
+  .blogCardTop{
+    padding: 0px 2rem;
+  }
+  .blogCards{
+    padding: 0px 2rem;
+  }
   .aboutUsCardMain1{
     right: 10rem;
     top: 3rem;
+  }
+  .latestBlog{
+    padding: 3rem 2rem;
   }
   .aboutUsCardMain2{
     left: 12rem;
@@ -711,6 +895,24 @@
     top: 0;
     left: 2rem;
   }
+
+  .blogCardTop{
+    flex-direction: column;
+  }
+  .categoryContainer{
+    margin-top: 1.5rem;
+  }
+
+  .blogLatestImg{
+    margin-top: 1rem;
+    width: 100%;
+    height: 200px;
+  }
+
+  .latestBlogContent{
+    padding: 1.5rem 0px;
+  }
+  
 
   .aboutUsImgCol{
     display: none;
@@ -941,7 +1143,9 @@
   .aboutUsDesc{
     font-size: 14px;
   }
-
+  .blogCardTop{
+    padding: 0px 1rem;
+  }
 
   .footer{
     padding: 1rem 1rem;
@@ -1132,6 +1336,101 @@
     padding: 0rem 1rem;
     bottom: 7rem;
   }
+
+
+  
+.latestBlog{
+  padding: 1rem 1rem;
+}
+
+.blogLatestHeading{
+  font-size: 1.5rem;
+  line-height: 28px;
+  margin-top: 1rem;
+}
+
+
+.goodReadTime{
+  font-size: 14px;
+}
+
+.blogDescLatest{
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 1rem;
+}
+
+.latestBlogContent{
+  padding: 1.5rem 0px;
+}
+
+
+.blogTitleText{
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+
+.blogCategoryText{
+  font-size: 14px;
+}
+
+.blogCatTitle{
+  display: none;
+}
+.blogCatIcon{
+  display: block;
+}
+.blogCards{
+  padding: 0px 1rem;
+}
+
+.blogLatestHeading2{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.blogDetailsTitle{
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+
+.blogDetails{
+  padding: 6.6rem 1rem;
+}
+
+.blogItemTitle{
+  font-size: 1.2rem;
+  line-height: 24px;
+}
+.blogDetailsBanner{
+  height: 200px;
+  margin-top: 2rem;
+}
+
+
+
+
+
+.serviceBanner{
+  height: 150px;
+}
+.serviceTitle{
+  font-size: 1.5rem;
+  line-height: 28px;
+  margin-top: 1rem;
+}
+
+.serviceDesc{
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 1rem;
+}
+
+.homeBlog{
+  padding: 0rem 1rem;
+}
+
 }
 
 
