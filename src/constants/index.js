@@ -1,4 +1,4 @@
-import { dm, dt, ru } from "../assets"
+import { dm, dt, projectMgmt, ru } from "../assets/index.js"
 
 export const navLinks = [
     {
@@ -412,5 +412,63 @@ export const recruitmentUpsurgeData = [
         title: "Diversity Hiring",
         description: "We are committed to promoting diversity and inclusion in the workplace. Our diversity hiring services help you attract and retain a diverse workforce, ensuring that your organization benefits from a range of perspectives and experiences.",
         banner : "https://image.lexica.art/full_webp/306ab7ce-0305-4b65-bc37-cd05e4b4fec7"
+    }
+];
+
+
+
+export const testimonialList = [
+    {
+        id : "d32ws2",
+        profileImg : "https://image.lexica.art/full_webp/54477fa6-0768-4d70-830f-7a2d7870c40c",
+        name : "John Doe",
+        designation : "CEO, Tech Company",
+        title : "Game-Changing Expertise",
+        testimonial : "Working with Trioinovations has been a game-changer for our business. Their expertise in digital transformation helped us streamline our processes and adapt to the ever-evolving tech landscape. Highly recommend their services!"
+    },
+    {
+        id : "d32ws3",
+        profileImg : "https://image.lexica.art/full_webp/45a3e0ac-32b1-4a36-9821-d6b67c1f1ee4",
+        name : "Jane Smith",
+        designation : "Marketing Director, E-commerce Firm",
+        title : "Incredible Results",
+        testimonial : "Incredible results! Trioinovations took our digital marketing strategy to new heights. Their innovative approach to SEO and social media management significantly boosted our online presence and drove sales. Couldn't be happier with the outcome."
+    },
+    {
+        id : "d32ws4",
+        profileImg : "https://image.lexica.art/full_webp/ded6c421-dadd-48ed-808b-cbea56a1cc8c",
+        name : "Deepika Johnson",
+        designation : "HR Manager, Fortune 500 Company",
+        title : "Exceptional Talent Acquisition",
+        testimonial : "Exceptional talent acquisition services! Trioinovations helped us find top-tier candidates for critical roles through their senior middle hiring and diversity hiring initiatives. Their commitment to excellence and professionalism is unmatched. A pleasure to work with!"
+    }
+];
+
+
+
+export const additionalServices = [
+    {
+        title: "Project Management",
+        description: "Ensure smooth project execution from inception to completion, meeting deadlines and budgets while maintaining quality standards. Manage resources, schedules, and deliverables effectively.",
+        bannerImg : projectMgmt,
+        path : "/our-services/digital-transformation"
+    },
+    {
+        title: "Consulting Services",
+        description: "Provide expert guidance and insights to clients on digital transformation strategies, helping them leverage technology for business growth and efficiency.",
+        bannerImg : ru,
+        path : "/our-services/digital-transformation"
+    },
+    {
+        title: "Quality Assurance",
+        description: "Ensure the reliability, security, and performance of digital solutions through comprehensive testing and quality assurance processes, delivering high-quality products to clients.",
+        bannerImg : dm,
+        path : "/our-services/digital-transformation"
+    },
+    {
+        title: "User Experience Design",
+        description: "Create intuitive and engaging user experiences for digital products, focusing on usability, accessibility, and user satisfaction to drive customer engagement and loyalty.",
+        bannerImg : dt,
+        path : "/our-services/digital-transformation"
     }
 ];

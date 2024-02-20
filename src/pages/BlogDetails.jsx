@@ -87,14 +87,16 @@ const BlogDetails = () => {
       </div>
 
 
-      <section>
+     
+    </div>
+
+    <section className='blogDetailsMoreBlogs bg-[#FAFAFA]'>
         <div className="mt-10 flex items-center justify-between">
               <div className="blogTitleText">Explore more blogs</div>
         </div>
 
         <BlogCards blogs={blogLists.slice(0,3)}/>
       </section>
-    </div>
    </div>
   )
 }

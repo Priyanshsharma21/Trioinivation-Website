@@ -1,5 +1,6 @@
 import { Col, Row } from 'antd'
 import React from 'react'
+import { GoDotFill } from 'react-icons/go'
 import { Link } from 'react-router-dom'
 
 const BlogCards = ({blogs}) => {
@@ -22,11 +23,13 @@ const BlogCards = ({blogs}) => {
                     <div className="font-medium px-4 py-2 domainBubble rounded-lg bg-[#7BABED] hover:bg-[#89b5f3] hover:shadow-xl transform  transition-all duration-300 mt-4 goodReadTime text-[#FFFFFF]">
                             {blog.domain}
                         </div>
-                        <div className="flex mt-4">
+                       
+                        <div className="flex mt-4 items-center">
                             <div className="font-medium goodReadTime text-[#737373]">
                             {blog.date}
                             </div>
-                            <div className="ml-5 font-medium goodReadTime text-[#737373]">
+                            <GoDotFill className="font-medium ml-2 sm:ml-3 goodReadTime text-[#737373]"/>
+                            <div className="ml-2 sm:ml-3 font-medium goodReadTime text-[#737373]">
                             {blog.readTime} min read
                             </div>
                         </div>

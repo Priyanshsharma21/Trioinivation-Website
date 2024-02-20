@@ -1,6 +1,6 @@
 import React from 'react'
-import { BlogCards, BriefInfoSection, HeroBanner, InformationCard } from '../components';
-import { homeInfoCardLeaf, homeUnderline, home_herobg } from '../assets';
+import { BlogCards, BriefInfoSection, HeroBanner, HomeOurService, InformationCard, Testimonials } from '../components';
+import { blogLeftFlower, blogRightFlower, homeInfoCardLeaf, homeUnderline, home_herobg } from '../assets';
 import { Col, Row } from 'antd';
 import { IoIosArrowForward } from "react-icons/io";
 import { blogLists, homeCoreValuesCards, homeServiceCards } from '../constants';
@@ -33,21 +33,21 @@ const Home = () => {
         <Row>
           {homeServiceCards.map((item,i)=>(
             <Col xl={8} lg={8} md={24} sm={24} xs={24}>
-              <div className="homeCard rounded-xl flex flex-col items-center bg-[#F5F5F5] hover:bg-[#7BABED] hover:shadow-xl transform  transition-all duration-300">
+              <Link to={item.path} className="homeCard rounded-xl flex flex-col items-center bg-[#F5F5F5] hover:bg-[#7BABED] shadow-sm hover:shadow-xl transform  transition-all duration-300">
                 <div className="homeCardIcon">
                   <img src={item.icon} alt="icon" />
                 </div>
-                <div className="homeCardTitle mt-4 text-[#737373]">
+                <div className="homeCardTitle mt-5 text-[#737373]">
                   {item.title}
                 </div>
-                <div className="homeCardDesc mt-4 text-center text-[#737373]">
+                <div className="homeCardDesc mt-4 font-normal text-center text-[#737373]">
                   {item.description}
                 </div>
-                <Link to={item.path} className="homeCardIcon text-[#7BABED] hover:text-white mt-6 flex">
+                <div className="homeCardIcon text-[#7BABED] hover:text-white mt-6 flex">
                   <div>Explore more</div>
                   <IoIosArrowForward className='ml-1 items-center'/>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </Col>
           ))}
         </Row>
@@ -62,6 +62,14 @@ const Home = () => {
           leafImg={homeInfoCardLeaf}
         />
       </section>
+
+      <div className="homeOurServiceMain">
+              <HomeOurService />
+      </div>
+
+      <div className="homeTestimonials bg-[#FAFAFA]">
+                <Testimonials />
+        </div>
 
       <section className="homeContactUs">
         <ContactUsSection />
@@ -80,7 +88,6 @@ const Home = () => {
                   Stay updated with our latest insights, news, and stories. Explore a wide range of topics in technology, digital marketing, design, AI, and more. Dive into our blog to discover valuable insights, trends, and tips that can help you stay ahead in the ever-evolving digital landscape.                
                 </div>
             </div>
-
             <div className="homeBlog">
               <BlogCards blogs={blogLists.slice(0,3)}/>
             </div>

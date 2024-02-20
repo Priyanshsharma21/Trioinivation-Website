@@ -27,7 +27,14 @@ import career4 from './career4.png'
 import contactUsSectionBG from './contactUsSectionBG.jpg'
 import aboutUs1 from './aboutUs1.png'
 import aboutUs2 from './aboutUs2.png'
-
+import testMark from './testMark.png'
+import projectMgmt from './projectMgmt.png'
+import swipeRight from './swipeRight.png'
+import swipeLeft from './swipeLeft.png'
+import swiperBg from './swiperBg.png'
+import blogLeftFlower from './blogLeftFlower.png'
+import blogRightFlower from './blogRightFlower.png'
+import homeBlogSection from './homeBlogSection.png'
 
 export {
     logo,
@@ -58,5 +65,13 @@ export {
     career4,
     contactUsSectionBG,
     aboutUs1,
-    aboutUs2
+    aboutUs2,
+    testMark,
+    projectMgmt,
+    swipeRight,
+    swipeLeft,
+    swiperBg,
+    blogLeftFlower,
+    blogRightFlower,
+    homeBlogSection
 }

@@ -5,6 +5,8 @@ import InformationCard from './InformationCard'
 import BriefInfoSection from './BriefInfoSection'
 import BlogCards from "./BlogCards"
 import ServicesCards from "./ServicesCards"
+import Testimonials from "./Testimonials"
+import HomeOurService from "./HomeOurService"
 
 export {
     Navbar,
@@ -13,5 +15,7 @@ export {
     InformationCard,
     BriefInfoSection,
     BlogCards,
-    ServicesCards
+    ServicesCards,
+    Testimonials,
+    HomeOurService
 }

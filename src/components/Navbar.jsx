@@ -96,7 +96,7 @@ const Navbar = () => {
             <div className="ml-2 navLinks flex items-center">
               <Link to={link.path}
               style={{borderBottom : location.pathname === link.path && `2px solid #50c17b`}}
-              className="hover:text-[#50c17b] transition-all duration-300 mt-2 pb-1">
+              className="text-[#737373] hover:text-[#50c17b] transition-all duration-300 mt-2 pb-1">
                 {link.title}
               </Link>
               {/* {i!==3 && ( */}
@@ -111,7 +111,7 @@ const Navbar = () => {
               style={{borderBottom : location.pathname === "/our-services" && `2px solid #50c17b`}}
               className='flex items-center cursor-pointer hover:text-[#50c17b] transition-all duration-300'
               >
-                <div className=" mt-2 pb-1">Our services</div>
+                <div className="text-[#737373] hover:text-[#50c17b] mt-2 pb-1">Our services</div>
                 <IoIosArrowDown  className='ml-1 mt-1'/>
               </div>
             </div>

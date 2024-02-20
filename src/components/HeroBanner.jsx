@@ -91,9 +91,9 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
                     <div>Contact us</div>
                     <FaArrowAltCircleRight className="ml-2 mt-[0.15rem] "/>
                   </Link>
-                  <button className='text-[#41AE6A] heroBtnText ml-6 heroLearnMore font-semibold'>
+                  <Link to={'/about'} className='text-[#41AE6A] heroBtnText ml-6 heroLearnMore font-semibold'>
                     Learn more
-                  </button>
+                  </Link>
                 </div>
             )}
               

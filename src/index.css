@@ -92,7 +92,7 @@
 }
 .heroContent{
   margin-left: 6rem;
-  margin-top: 6rem;
+  margin-top: 8rem;
 }
 
 .contactButton,.heroLearnMore{
@@ -309,7 +309,7 @@
 
 /* contact */
 .contactBox{
-  margin: 4rem 6rem;
+  margin: 6rem 6rem;
   border-radius: 8px;
 }
 
@@ -393,7 +393,7 @@
 }
 .infoCardMainTitle{
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 20px;
 }
 
@@ -434,8 +434,8 @@
 }
 
 .openRoles{
-  margin-bottom: 6rem;
-  margin-top: 1rem;
+  margin-bottom: 4rem;
+  margin-top: 0rem;
 }
 
 .careerBtn{
@@ -526,7 +526,7 @@
   padding: 0px 9rem;
 }
 .aboutUs{
-  padding: 5rem 0rem;
+  padding: 6rem 0rem;
 }
 .homeAboutUsBlog{
   padding: 0rem 0rem;
@@ -562,6 +562,7 @@
 
 .latestBlog{
   padding: 3rem 7rem;
+  padding-bottom: 0rem;
 }
 
 .blogLatestHeading{
@@ -631,7 +632,7 @@
 }
 
 .blogCards{
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .serviceCards{
@@ -664,6 +665,7 @@
 /* blog details */
 .blogDetails{
   padding: 9rem 7rem;
+  padding-bottom: 5rem;
 }
 .blogDetailsTitle{
   font-size: 2rem;
@@ -720,8 +722,122 @@
 
 .homeBlog{
   padding: 2rem 7rem;
+  margin-bottom: 7rem;
 }
 
+
+
+/* home testimonials */
+.homeTestimonials{
+  margin-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.profilePic{
+  width: 50px;
+  height: 50px;
+}
+.testCards{
+  padding: 1rem;
+}
+.textCardMain{
+  padding: 2rem;
+  margin-left: 5rem;
+}
+.testimonialsBox{
+  padding: 5rem 7rem;
+}
+.textTitleMain{
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 1rem;
+}
+.textTitleDescMain{
+  margin-top: 2rem;
+  font-size: 18px;
+  line-height: 28px;
+}
+.profileName{
+  font-size: 18px;
+}
+.profileDeg{
+  font-size: 14px;
+}
+.testMark{
+  right: 1rem;
+  top: -3rem;
+}
+
+
+/* home our service main */
+.homeOurServiceMain{
+  padding: 7rem 9rem;
+}
+.swiperBanner{
+  padding: 2rem;
+}
+.swpCard{
+  padding: 1rem;
+}
+.swiperCard{
+  padding: 0rem 6rem;
+}
+
+
+.swiper-button-prev {
+  background-image: url("./assets/swipeLeft.png") ;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url("./assets/swipeRight.png") ;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiperBg{
+  position: absolute;
+  right: -10rem;
+  top: 3rem;
+}
+
+.homeAboutUsBlog{
+  background-image: url("./assets/homeBlogSection.png");
+  background-size: contain;
+  background-position: right left;
+}
+
+
+.flowerRight{
+  position: absolute;
+  right: 10px;
+  top: 2rem;
+}
+
+
+.aboutContactSection{
+  margin-top: 6rem;
+}
+
+.blogCardsSection{
+  padding-top: 5rem;
+}
+
+.blogDetailsMoreBlogs{
+  padding: 2rem 7rem;
+  padding-bottom: 7rem;
+}
 /* Mobile responsive */
 
 /*  XX-Large devices (larger desktops, 1400px and up) */
@@ -780,8 +896,19 @@
   .heroImg{
     right: 5rem;
   }
+
+  .blogDetailsMoreBlogs{
+    padding: 2rem 2rem;
+    padding-bottom: 7rem;
+  }
+  .homeOurServiceMain{
+    padding: 5rem 2rem;
+  }
   .blogDetails{
     padding: 7rem 2rem;
+  }
+  .testimonialsBox{
+    padding: 5rem 2rem;
   }
   .homeBlog{
     padding: 2rem 2rem;
@@ -877,6 +1004,7 @@
   
   .homeSectionCards{
     padding: 0rem 0rem;
+    margin-bottom: 5rem;
   }
   
   .careerWorkWithUs{
@@ -894,6 +1022,31 @@
   .homeCardInfoLeaf{
     top: 0;
     left: 2rem;
+  }
+
+  .swiperBg{
+    position: absolute;
+    right: -2rem;
+    top: 2rem;
+  }
+  .swiperBg img{
+    width: 60%;
+    display: none;
+  }
+
+  .textCardMain{
+    padding: 2rem;
+    margin-left: 0rem;
+    margin-top: 4rem;
+  }
+  .testMark{
+    right: 0;
+    top: 2rem;
+    right: 1rem;
+  }
+
+  .testMark img{
+    width: 60px;
   }
 
   .blogCardTop{
@@ -993,6 +1146,11 @@
     position: relative;
     bottom: 6rem;
   }
+
+  .serviceSwiper{
+    margin-top: 4rem;
+  }
+  
   
 }
 
@@ -1248,7 +1406,12 @@
 
    .contactBox{
     margin: 0rem 0rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
     border-radius: 8px;
+  }
+  .testimonialsBox{
+    padding: 5rem 1rem;
   }
    .contactForm{
     padding: 3rem 0px;
@@ -1397,6 +1560,7 @@
 
 .blogDetails{
   padding: 6.6rem 1rem;
+  padding-bottom: 3rem;
 }
 
 .blogItemTitle{
@@ -1431,6 +1595,55 @@
   padding: 0rem 1rem;
 }
 
+.textTitleMain{
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 1rem;
+}
+.textTitleDescMain{
+  margin-top: 1rem;
+  font-size: 14px;
+  line-height: 28px;
+}
+.profileName{
+  font-size: 14px;
+}
+.profileDeg{
+  font-size: 14px;
+}
+
+.textCardMain{
+  padding: 1rem;
+  margin-left: 0rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: max-content;
+}
+.homeOurServiceMain{
+  padding: 5rem 1rem;
+}
+
+.swiperCard{
+  padding: 0rem 1rem;
+}
+
+.homeTestimonials{
+  margin-top: 0rem;
+  padding-bottom: 1rem;
+}
+
+.aboutUs{
+  padding: 4rem 0rem;
+}
+
+.blogCardsSection{
+  padding-top: 2rem;
+}
+.blogDetailsMoreBlogs{
+  padding: 1rem 1rem;
+  padding-bottom: 7rem;
+}
 }
 
 

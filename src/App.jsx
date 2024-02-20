@@ -12,6 +12,9 @@ import {  Home,
   DigitalMarketing } from './pages';
 import Footer from './components/Footer';
 import { FloatButton } from 'antd';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const App = () => {
   const [preLoader, setPreLoader] = useState(true)

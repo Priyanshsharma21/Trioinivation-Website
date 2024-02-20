@@ -20,8 +20,10 @@ const InformationCard = ({title, description, cardList, bgCol, leafImg}) => {
             style={{borderRight : i !== cardList.length - 1 && "1px solid #B2E8C1"}}
             >
                <div>
-                    <div className="infoCardMainSr font-semibold text-[#41AE6A]">{item.sr}</div>
-                        <div className="infoCardMainTitle mt-2 text-[#262626]">{item.title}</div>
+                    <div
+                    style={{color : bgCol === "#F1F6FD" ? "#7BABED" : "#41AE6A"}}
+                    className="infoCardMainSr font-bold">{item.sr}</div>
+                        <div className="infoCardMainTitle mt-4 text-[#262626]">{item.title}</div>
                         <div className="infoCardMainDesc mt-4 text-[#737373]">{item.description}</div>
                </div>
             </Col>

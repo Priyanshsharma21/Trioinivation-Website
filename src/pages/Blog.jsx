@@ -9,6 +9,7 @@ import { FaCameraRetro } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { FaRobot } from "react-icons/fa";
 import { TiGroupOutline } from "react-icons/ti";
+import { GoDotFill } from 'react-icons/go'
 
 export const blogCategory = [
   {
@@ -97,7 +98,8 @@ const Blog = () => {
                 <div className="font-medium goodReadTime text-[#737373]">
                   {blogLists[0].date}
                 </div>
-                <div className="ml-5 font-medium goodReadTime text-[#737373]">
+                <GoDotFill className="font-medium ml-2 sm:ml-3 goodReadTime text-[#737373]"/>
+                <div className="ml-3 font-medium goodReadTime text-[#737373]">
                   {blogLists[0].readTime} min read
                 </div>
               </div>
@@ -112,7 +114,7 @@ const Blog = () => {
         </section>
 
 
-        <section className="blogCardsSection">
+        <section className="blogCardsSection bg-[#FAFAFA]">
           <div className="blogCardTop flex items-center justify-between">
             <div className="blogTitleText">Explore more blogs</div>
             <div className="flex categoryContainer">
