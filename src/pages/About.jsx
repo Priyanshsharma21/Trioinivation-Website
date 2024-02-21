@@ -4,6 +4,8 @@ import { aboutBannerHero, aboutUs1, aboutUs2, homeInfoCardLeaf, homeUnderline } 
 import { homeCoreValuesCards } from '../constants'
 import ContactUsSection from '../components/ContactUsSection'
 import { Row, Col } from 'antd'
+import { motion } from 'framer-motion'
+
 
 const About = () => {
   return (
@@ -19,7 +21,10 @@ const About = () => {
         title2HighlightPart={"web & mobile"}
         />
         <section className="aboutUs">
-          <div className="careerInfo flex flex-col items-center">
+          <motion.div
+          whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+          transition={{duration:0.5}}
+          className="careerInfo flex flex-col items-center">
                 <div className='flex w-full flex-col items-center'>
                   <div className="whorv text-[#41AE6A]">About Trioinovation</div>
                   <img src={homeUnderline} alt="underline" />
@@ -29,11 +34,14 @@ const About = () => {
                 </div>
                 <div className='subHeading2 mt-4 aboutUsSecOneDesc careerDescMain text-center'>
                 Welcome to Trioinovations, where innovation meets excellence. In our Digital Transformation domain, we redefine businesses through a comprehensive suite of services. Our website development ensures a compelling online presence, while our front-end and back-end solutions optimize user experiences. Cloud integration and app development drive scalability and efficiency, and automation solutions propel your operations into the future. At Trioinovations,                 </div>
-            </div>
+            </motion.div>
         </section>
 
         <section className="aboutUsSec2">
-          <div>
+          <motion.div
+           whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+           transition={{duration:0.5}}    
+          >
             <Row>
               <Col xl={14} lg={12} md={24} sm={24} xs={24} className='aboutUsImgCol'>
                 <div className="w-full flex justify-left">
@@ -51,8 +59,11 @@ const About = () => {
                 </div>
               </Col>
             </Row>
-          </div>
-          <div className='mt-16 mb-16'>
+          </motion.div>
+          <motion.div
+          whileInView={{x:[200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+           transition={{duration:0.5}}    
+          className='mt-16 mb-16'>
             <Row>
               <Col xl={8} lg={12} md={24} sm={24} xs={24} className='relative w-full aboutUsCardMain2'>
               <div className="aboutUsCard2 shadow-lg bg-white">
@@ -68,7 +79,7 @@ const About = () => {
                   <img src={aboutUs2} alt="aboutUs2" />
               </Col>
             </Row>
-          </div>
+          </motion.div>
         </section>
 
         <section className="aboutCoreValues">

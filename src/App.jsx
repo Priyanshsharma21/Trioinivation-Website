@@ -1,48 +1,54 @@
-import React, { useEffect, useState } from 'react'
-import { Navbar, PreLoader } from './components';
+import React, { useEffect, useState } from 'react';
+import { Navbar, ScrollToTop } from './components';
 import { Route, Routes, useNavigate } from "react-router-dom";
-import {  Home,
-  Blog,
-  Contact,
-  About,
-  BlogDetails,
-  Career,
-  RecruitmentUpsurge,
-  DigitalTransformation,
-  DigitalMarketing } from './pages';
+import { Home, Blog, Contact, About, BlogDetails, Career, RecruitmentUpsurge, DigitalTransformation, DigitalMarketing } from './pages';
 import Footer from './components/Footer';
 import { FloatButton } from 'antd';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { logo, logo2 } from './assets';
 
 const App = () => {
-  const [preLoader, setPreLoader] = useState(true)
-  const [timer, setTimer] = useState(1)
-  const navigate = useNavigate()
+  const [preLoader, setPreLoader] = useState(true);
+  const [count, setCount] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    timer > 0 && setTimeout(() => setTimer(timer - 1), 1000);
-  }, [timer]);
+    const timer = setInterval(() => {
+      setCount((prevCount) => prevCount + 5);
+    }, 100);
+
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
-    if (timer === 0) {
+    if (count >= 100 && window.location.pathname === '/') {
       setPreLoader(false);
-      navigate('/'); 
+      clearInterval();
+      navigate('/');
     }
-  }, [timer]);
+  }, [count]);
 
   return (
     <div className="app w-full">
       {preLoader ? (
         <div className="preloader w-full h-screen flex flex-col justify-center items-center">
-          <PreLoader />
+        <div className="w-full h-screen flex flex-col bg-[#7BABED]">
+          <div className="w-full h-screen flex flex-col justify-center items-center">
+            <img src={logo2} alt="website logo" className='z-100 preLoaderLogoImg' />
+            <motion.h1 className='text-[2rem] absolute top-2 right-5 text-[#28282834] font-bold'>{count}</motion.h1>
+            <div className='loader' />
+          </div>
+        </div>
         </div>
       ) : (
         <div className="w-full main_wrapper z-0">
           <div className="flex justify-center">
             <Navbar />
           </div>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -59,9 +65,11 @@ const App = () => {
         </div>
       )}
 
-      <FloatButton.BackTop visibilityHeight={0} />
+      {!preLoader && (
+        <FloatButton.BackTop visibilityHeight={0} />
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

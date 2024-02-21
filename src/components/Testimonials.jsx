@@ -3,6 +3,7 @@ import { homeUnderline, testMark } from '../assets'
 import { Col, Row } from 'antd'
 import { testimonialList } from '../constants'
 import { IoStar } from "react-icons/io5";
+import { motion } from 'framer-motion'
 
 const Testimonials = () => {
     const [selectedTestimonials, setSelectedTestimonials] = useState(testimonialList[0])
@@ -17,7 +18,10 @@ const Testimonials = () => {
 
   return (
     <div className="testimonials">
-            <div className="careerInfo flex flex-col items-center">
+                <motion.div 
+                whileInView={{y:[100,50,0], opacity:[0,0,1]}}
+                transition={{duration:0.5}}
+                className="careerInfo flex flex-col items-center">
                     <div className='flex w-full flex-col items-center'>
                     <div className="whorv text-[#41AE6A]">TESTIMONIALS</div>
                     <img src={homeUnderline} alt="underline" />
@@ -28,12 +32,15 @@ const Testimonials = () => {
                     <div className='subHeading2 mt-4 aboutUsSecOneDesc careerDescMain text-center'>
                         Discover what our clients have to say about their experiences working with us. Hear firsthand testimonials and feedback on our services, expertise, and commitment to delivering exceptional results. From digital transformation to recruitment upsurge, explore how we've helped businesses thrive and succeed.
                     </div>
-                </div>
+                </motion.div>
 
                 <div className="testimonialsBox">
                     <Row>
                         <Col xl={6} lg={10} md={24} sm={24} xs={24}>
-                            <div className="testimonialListsContainer">
+                            <motion.div
+                            whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                            transition={{duration:1}}       
+                            className="testimonialListsContainer">
                                 {testimonialList.map((item,i)=>(
                                     <div 
                                     key={item.id}
@@ -56,10 +63,13 @@ const Testimonials = () => {
                                         </div>
                                     </div>
                                 ))}
-                            </div>
+                            </motion.div>
                         </Col>
                         <Col xl={18} lg={14} md={24} sm={24} xs={24}>
-                            <div className="textCardMain h-full bg-[#F1F6FD] rounded-lg shadow-lg">
+                            <motion.div
+                            whileInView={{x:[200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                            transition={{duration:1}}
+                            className="textCardMain h-full bg-[#F1F6FD] rounded-lg shadow-lg">
                                 <div className="testMark absolute">
                                     <img src={testMark} alt="testMark" />
                                 </div>
@@ -76,7 +86,7 @@ const Testimonials = () => {
                                 <div className="textTitleDescMain font-medium text-[#656565]">
                                     {selectedTestimonials.testimonial}
                                 </div>
-                            </div>
+                            </motion.div>
                         </Col>
                     </Row>
                 </div>

@@ -1,10 +1,15 @@
 import { Col, Row } from 'antd'
 import React from 'react'
 import { FaArrowUp } from "react-icons/fa6";
+import { motion } from 'framer-motion';
+
 
 const ServicesCards = ({services}) => {
   return (
-    <div className="serviceCard">
+    <motion.div
+    whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+    transition={{duration:1}}
+    className="serviceCard">
       <Row gutter={{
         xs: 8,
         sm: 16,
@@ -31,7 +36,7 @@ const ServicesCards = ({services}) => {
           </Col>
         ))}
       </Row>
-    </div>
+    </motion.div>
   )
 }
 

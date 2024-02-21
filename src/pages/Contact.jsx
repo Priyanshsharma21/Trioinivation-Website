@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { contactCardDesign, contactImg, contactUsBannerHero, homeUnderline } from '../assets'
 import { HeroBanner } from '../components'
 import { Col, Row, Form, Input, Button } from 'antd'
+import { motion } from 'framer-motion'
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +34,10 @@ const Contact = () => {
         title2HighlightPart={"Connect with Us"}
         />
 
-        <section className="contactFormContainer">
+        <motion.div
+         whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+        transition={{duration:0.5}}
+        className="contactFormContainer">
           <div className="contactBox bg-[#F1F6FD]">
             <Row>
               <Col xl={10} lg={12} className="contactImg flex justify-center items-center">
@@ -61,8 +66,11 @@ const Contact = () => {
               </Col>
             </Row>
           </div>
-        </section>
-        <section className="contactConnectWithUs flex flex-col items-center">
+        </motion.div>
+        <motion.div
+         whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+          transition={{duration:0.5}}
+        className="contactConnectWithUs flex flex-col items-center">
           <div className='contactFormTitle mb-5'>Connect With Us</div>
           <Row className='flex'>
           <Col xl={12} lg={12} md={24} sm={24} xs={24} className='flex justify-center'>
@@ -80,7 +88,7 @@ const Contact = () => {
             </div>
           </Col>
           </Row>
-        </section>
+        </motion.div>
 
         <section className="mt-16">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55991.10808332078!2d77.0397095484314!3d28.70626655959539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d06a18fd99255%3A0x82d87d985b01ba3d!2sKrishan%20Vihar%2C%20Delhi%2C%20110086!5e0!3m2!1sen!2sin!4v1708196559261!5m2!1sen!2sin" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>

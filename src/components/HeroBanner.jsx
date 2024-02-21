@@ -3,7 +3,8 @@ import { Row, Col } from 'antd'
 import { home_arrow, home_front_wallpaper, home_pattern } from '../assets'
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
-
+import { motion } from 'framer-motion'
+import { scaleVariant } from '../utils/index'
 
 const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, showNavigation, title2, title2HighlightPart}) => {
     const [navName, setNavName] = useState("")
@@ -46,12 +47,18 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
           <div className="w-full h-[100vh]  object-cover z-100 absolute">
             <div className="heroContent z-10">
             {showArrow && (
-                <div className="arrow">
+                <motion.div
+                whileInView={{y:[-100,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                transition={{duration:1}}
+                className="arrow">
                     <img className="relative websiteHeroArrow" src={home_arrow} alt="website arrow" />
-                </div>
+                </motion.div>
             )}
             {showNavigation && (
-                <div className="heroNavigation flex">
+                <motion.div
+                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                transition={{duration:1}}
+                className="heroNavigation flex">
                     <div className=''>Home</div>
                     <div className='ml-2'>{">"}</div>
                     <div style={{ 
@@ -60,33 +67,48 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
                     {navName2 && (<div className='ml-2'>{">"}</div>)}
                     {navName2 && (<div className='ml-2 text-[#50c17b]'>{navName2}</div>)}
                     
-                </div>
+                </motion.div>
             )}
             {showNavigation && (
-                <div className="heroNavigationText">
+                <motion.div
+                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                transition={{duration:1}}
+                className="heroNavigationText">
                     {navName2 ? navName2 : navName}
-                </div>
+                </motion.div>
             )}
             {showTitle1 && (
-                <div className="heroHeading">
+                <motion.div
+                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                transition={{duration:1}}
+                className="heroHeading">
                     <span className="heroHeadingMain text-[#7BABED]">Connect with us</span> to grow your business with ease
-                </div>
+                </motion.div>
             )}
 
             {title2 && (
-                <div className="heroHeading heroHeading2 mt-1">
+                <motion.div
+                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                transition={{duration:1}}
+                className="heroHeading heroHeading2 mt-1">
                     {title2} <span className="heroHeadingMain text-[#7BABED]">{title2HighlightPart}</span>
-                </div>
+                </motion.div>
             )}
             
             {showSubTitle && (
-                <div className="subHeading mt-5">
+                <motion.div
+                  whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                  transition={{duration:1}}
+                className="subHeading mt-5">
                     Transforming visions into digital realities. Our comprehensive services encompass digital transformation, marketing prowess, and talent solutions, ensuring your success in a dynamic world.
-                </div>
+                </motion.div>
             )}
               
             {showBtn && (
-                <div className="heroActionBtns mt-6 flex">
+                <motion.div
+                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                transition={{duration:1}}
+                className="heroActionBtns mt-6 flex">
                   <Link to="/contact" className="contactButton heroBtnText font-semibold flex items-center bg-[#41AE6A] hover:text-white hover:bg-[#50c17b] text-white">
                     <div>Contact us</div>
                     <FaArrowAltCircleRight className="ml-2 mt-[0.15rem] "/>
@@ -94,7 +116,7 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
                   <Link to={'/about'} className='text-[#41AE6A] heroBtnText ml-6 heroLearnMore font-semibold'>
                     Learn more
                   </Link>
-                </div>
+                </motion.div>
             )}
               
             </div>
@@ -104,9 +126,10 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
          <img src={home_pattern} alt="Home Pattern" className="w-full absolute h-[100vh] object-cover" />
         </Col>
       </Row>
-      <div className="modelFloating">
+      <motion.div 
+      className="modelFloating">
         <img src={heroImg} className='absolute heroImg' alt="Hero Section Model" />
-      </div>
+      </motion.div>
     </section>
   </div>
   )

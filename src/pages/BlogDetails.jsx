@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import BlogCards from '../components/BlogCards.jsx';
+import { motion } from 'framer-motion'
 
 
 const BlogDetails = () => {
@@ -19,7 +20,7 @@ const BlogDetails = () => {
         setBlog(item)
       }
     })
-  },[])
+  },[id])
 
   const socialMediaLinks = [
     {
@@ -43,11 +44,20 @@ const BlogDetails = () => {
   return (
    <div className="blogDetailsMai">
      <div className='blogDetails'>
-      <div className="blogDetailsTitle flex justify-center item-center w-full">{blog?.title}</div>
-      <div className="blogDetailsBanner w-full">
+      <motion.div 
+      whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+      transition={{duration:0.5}}
+      className="blogDetailsTitle flex justify-center item-center w-full">{blog?.title}</motion.div>
+      <motion.div
+          whileInView={{scale:[0,1], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+          transition={{duration:0.5}}
+      className="blogDetailsBanner w-full">
         <img className="w-full h-full object-cover rounded-xl" src={blog?.banner} alt={blog?.title} />
-      </div>
-      <div className='flex justify-between items-center w-full mt-4'>
+      </motion.div>
+      <motion.div
+      whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+      transition={{duration:0.5}}
+      className='flex justify-between items-center w-full mt-4'>
               <div className="font-medium flex items-center px-4 py-2 domainBubble rounded-lg bg-[#7BABED] hover:bg-[#89b5f3] hover:shadow-xl transform  transition-all duration-300 goodReadTime text-[#FFFFFF]">
                 {blogLists[0]?.domain}
               </div>
@@ -60,14 +70,17 @@ const BlogDetails = () => {
                 {blogLists[0]?.readTime} min read
               </div>
             </div>
-      </div>
+      </motion.div>
 
       <div className="blogDetailsContent">
               {blog?.content.map((item,i)=>(
-                <div>
+                <motion.div
+                whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+                transition={{duration:0.5}}
+                >
                   <div className="blogItemTitle">{item?.title}</div>
                   <div className="blogItemDesc">{item?.description}</div>
-                </div>
+                </motion.div>
               ))}
         </div>
 
@@ -76,11 +89,11 @@ const BlogDetails = () => {
         <div className="blogShareThis ml-4">
               <div className='flex'>
                             {socialMediaLinks.map((item,i)=>(
-                                <div 
+                                <motion.div
                                 style={{marginLeft : i===0 ? 0 : 10}}
                                 className="p-2 sm:p-3 bg-[#41AE6A] text-[#ffffff] rounded-full hover:bg-[#4fb977] cursor-pointer hover:shadow-xl transform  transition-all duration-300">
                                     {item.icon}
-                                </div>
+                                </motion.div>
                             ))}
                 </div>
         </div>
@@ -91,11 +104,18 @@ const BlogDetails = () => {
     </div>
 
     <section className='blogDetailsMoreBlogs bg-[#FAFAFA]'>
-        <div className="mt-10 flex items-center justify-between">
+        <motion.div
+        whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+        transition={{duration:0.5}}
+        className="mt-10 flex items-center justify-between">
               <div className="blogTitleText">Explore more blogs</div>
-        </div>
-
-        <BlogCards blogs={blogLists.slice(0,3)}/>
+        </motion.div>
+        
+        <motion.div
+        whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+        transition={{duration:1}}>
+            <BlogCards blogs={blogLists.slice(0,3)}/>
+        </motion.div>
       </section>
    </div>
   )

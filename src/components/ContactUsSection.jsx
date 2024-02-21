@@ -7,6 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { motion } from 'framer-motion'
 
 const ContactUsSection = () => {
     const [formData, setFormData] = useState({
@@ -44,12 +45,22 @@ const ContactUsSection = () => {
     ]
   return (
     <div className='contactUsSection'>
-        <div className="contactUsBG">
-            <div className="contactUsBGTitle w-full text-center">Don’t hesitate to contact us for better information & services</div>
-            <div className="contactUsBGDesc w-full text-center">Don’t hesitate to reach out to us for more information and better services. We’re here to assist you and provide the support you need. Contact us today to start your journey towards digital transformation and success.</div>
+        <div
+        className="contactUsBG">
+            <motion.div 
+            whileInView={{y:[100,50,0], opacity:[0,0,1]}}
+            transition={{duration:0.5}}
+            className="contactUsBGTitle w-full text-center">Don’t hesitate to contact us for better information & services</motion.div>
+            <motion.div 
+            whileInView={{y:[100,50,0], opacity:[0,0,1]}}
+            transition={{duration:0.5}}
+            className="contactUsBGDesc w-full text-center">Don’t hesitate to reach out to us for more information and better services. We’re here to assist you and provide the support you need. Contact us today to start your journey towards digital transformation and success.</motion.div>
         </div>
 
-        <div className="contactFormInfo">
+        <motion.div
+        whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+        transition={{duration:0.5}}
+        className="contactFormInfo">
         <Row>
               <Col xl={10} lg={12} md={24} sm={24} xs={24} className="contactSectionInfo w-full rounded-tl-lg shadow-xl rounded-bl-lg bg-[#4D82E4] flex">
                   <div className="contactInfoBox">
@@ -111,7 +122,7 @@ const ContactUsSection = () => {
                 </div>
               </Col>
             </Row>
-        </div>
+        </motion.div>
     </div>
   )
 }

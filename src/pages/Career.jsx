@@ -4,6 +4,7 @@ import { career1, career2, career3, career4, careerBannerHero, careerInfoCardLea
 import { careerBenefitsCards, openRolesCardData } from '../constants'
 import { Row,Col, Divider } from 'antd'
 import { IoArrowUpSharp } from "react-icons/io5";
+import { motion } from 'framer-motion'
 
 const Career = () => {
   return (
@@ -22,10 +23,18 @@ const Career = () => {
       <section className="careerWorkWithUs">
         <Row>
           <Col xl={6} lg={8} md={24} sm={24} xs={24} className="flex justify-center items-center careerColToDel">
-            <img src={career1} alt="career1" />
+            <motion.div
+            whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+            transition={{duration:0.5}}    
+            >
+              <img src={career1} alt="career1" />
+            </motion.div>
           </Col>
           <Col xl={12} lg={24} md={24} sm={24} xs={24}>
-            <div className="careerInfo flex flex-col items-center">
+            <motion.div
+            whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+            transition={{duration:0.5}}
+            className="careerInfo flex flex-col items-center">
               <div className='flex w-full flex-col items-center'>
                 <div className="whorv text-[#41AE6A]">Work with us</div>
                 <img src={homeUnderline} alt="underline" />
@@ -36,14 +45,22 @@ const Career = () => {
               <div className='subHeading2 careerDescMain text-center'>
                 We're a small team making a disproportionate impact. Join us and help us build a user-friendly, transparent platform We're a small team making a disproportionate impact
               </div>
-            </div>
-            <div className="careerInfo flex justify-center">
+            </motion.div>
+            <motion.div
+            whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+            transition={{duration:1}}
+            className="careerInfo flex justify-center">
               <img src={career2} alt="career2" className='m-5' />
               <img src={career3} alt="career3" className='m-5' />
-            </div>
+            </motion.div>
           </Col>
           <Col xl={6} lg={8} md={24} sm={24} xs={24} className="flex justify-center items-center careerColToDel">
-            <img src={career4} alt="career4" />
+          <motion.div
+            whileInView={{x:[200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+            transition={{duration:0.5}}    
+            >
+              <img src={career4} alt="career4" />
+            </motion.div>
           </Col>
         </Row>
       </section>
@@ -69,7 +86,10 @@ const Career = () => {
       </section>
 
 
-      <section className="openRoles">
+      <motion.div
+       whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+        transition={{duration:0.5}}
+      className="openRoles">
         <div className="titleOpenRole">
           Open roles
         </div>
@@ -91,7 +111,7 @@ const Career = () => {
             </Row>
           ))}
         </div>
-      </section>
+      </motion.div>
     </div>
   )
 }

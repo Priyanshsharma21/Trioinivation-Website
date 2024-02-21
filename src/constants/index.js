@@ -24,6 +24,38 @@ export const navLinks = [
 ]
 
 
+
+export const navLinks2 = [
+    {
+        title : "Home",
+        path : "/",
+    },
+
+    {
+        title : "About us",
+        path : "/about",
+    },
+
+    {
+        title : "Career",
+        path : "/career",
+    },
+
+    {
+        title : "Blogs",
+        path : "/blog",
+    },
+
+    {
+        title : "Contact",
+        path : "/contact",
+    },
+
+]
+
+
+
+
 export const services = {
     "digital-transformation" : ["Frontend Development", "Backend Development", "Mobile App Development", "Support Services", "Cloud", "Testing", "Graphic Design"],
 
@@ -156,9 +188,9 @@ export const blogLists = [
     {
         id : "3e2w2s2",
         title : "Embracing Neurodiversity Within Information Security",
-        description :  `Learn more about neurodivergence and why a diverse team produces better results in many different fields of business.
-        Get practical examples of skills that people of all neurotypes bring to strengthen your information security program.
-        Tips for getting started on building a neurodiverse team.`,
+        description :  `Neurodiversity, the natural variation in human brain function, is a concept that celebrates the unique strengths and perspectives of individuals with neurological differences such as autism, ADHD, dyslexia, and others. In the context of information security, embracing neurodiversity can lead to more innovative and effective approaches to securing sensitive data and systems.
+        A diverse team, including individuals with neurodivergent traits, can bring a wide range of skills and perspectives that are valuable in the field of information security. People with neurodivergent traits often possess exceptional attention to detail, pattern recognition abilities, and out-of-the-box thinking, which are all crucial for identifying and mitigating security threats.
+        By understanding and accommodating the needs of neurodivergent individuals, organizations can create a more inclusive and supportive work environment. This not only benefits the individuals themselves but also contributes to a more resilient and effective information security program.`,
         content : [
             {
                 title : "The Science Behind Neurodivergence and The Technology Industry",
@@ -472,3 +504,24 @@ export const additionalServices = [
         path : "/our-services/digital-transformation"
     }
 ];
+
+
+
+
+
+export const servicesData = {
+    "Frontend Development": "We specialize in creating user-friendly and engaging interfaces using the latest frontend technologies such as React, Angular, and Vue.js. Our frontend development services focus on delivering high-performance and responsive web applications.",
+    "Backend Development": "Our backend development services cover a wide range of technologies and frameworks such as Node.js, Django, and Flask. We build scalable and secure backend solutions that power your applications and handle complex business logic.",
+    "Mobile App Development": "We offer end-to-end mobile app development services for iOS and Android platforms. From conceptualization to design and development, we ensure that your mobile app meets the highest standards of performance and usability.",
+    "Support Services": "Our support services ensure that your digital solutions run smoothly and efficiently. From troubleshooting and bug fixes to performance optimization, we provide comprehensive support to keep your systems up and running.",
+    "Cloud": "We help businesses leverage the power of cloud computing to improve scalability, flexibility, and cost-efficiency. Our cloud services include cloud migration, infrastructure management, and application development for cloud platforms.",
+    "Testing": "We offer comprehensive testing services to ensure the quality and reliability of your digital solutions. Our testing services include manual and automated testing, performance testing, security testing, and more.",
+    "Graphic Design": "Our graphic design services focus on creating visually stunning and impactful designs that resonate with your audience. From branding and logo design to digital illustrations and UI/UX design, we cover all aspects of graphic design.",
+    "SEO": "Our SEO services focus on improving your website's visibility and ranking on search engines. We use proven strategies and techniques to optimize your website for relevant keywords, increase organic traffic, and drive conversions.",
+    "Social Media Management": "We offer comprehensive social media management services to help you build and maintain a strong presence on popular social media platforms. From content creation to community engagement, we handle all aspects of your social media strategy.",
+    "Google Ads": "Our Google Ads services help you reach your target audience and drive relevant traffic to your website. We create and manage Google Ads campaigns that are optimized for maximum ROI and conversions.",
+    "Content Creation": "We specialize in creating high-quality and engaging content that resonates with your audience. From blog posts and articles to videos and infographics, we produce content that drives traffic, leads, and sales.",
+    "Senior Middle Hiring": "Our senior middle hiring services focus on recruiting top-tier talent for mid-level and senior positions within your organization. We leverage our extensive network and industry expertise to identify and attract qualified candidates who meet your specific requirements.",
+    "Global Sourcing": "Our global sourcing services enable you to expand your talent pool beyond local boundaries. We leverage our global network and resources to source qualified candidates from around the world, ensuring that you have access to the best talent, regardless of location.",
+    "Diversity Hiring": "We are committed to promoting diversity and inclusion in the workplace. Our diversity hiring services help you attract and retain a diverse workforce, ensuring that your organization benefits from a range of perspectives and experiences."
+  };

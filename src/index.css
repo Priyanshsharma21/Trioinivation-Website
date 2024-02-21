@@ -12,15 +12,16 @@
 }
 
 ::-webkit-scrollbar{
-  width: 5px;
+  /* width: 5px; */
+  display: none;
 }
-::-webkit-scrollbar-track{
+/* ::-webkit-scrollbar-track{
   background: #E7EDF6;
 }
 ::-webkit-scrollbar-thumb{
   background: #50c17b65;
   border-radius: 10rem;
-}
+} */
 
 /* loading animaiton style  */
 .loader {
@@ -141,10 +142,17 @@
   margin-top: 15rem;
 }
 
+.preLoaderLogoImg{
+  z-index: 100;
+  width: 200px;
+}
+
 
 .desktopNavDrop{
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  background-image: url(./assets/footerPattern.png) !important;
+  background-size: cover !important;
 }
 
 .navDropTitle{
@@ -156,7 +164,7 @@
 .dropNavItem{
   font-size: 16px;
   margin-top: 0.8rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .navbarMobileDrawer{
@@ -241,7 +249,8 @@
 /* home */
 .homeStripe{
   padding: 2rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
 .homeWhoRV{
@@ -838,6 +847,30 @@
   padding: 2rem 7rem;
   padding-bottom: 7rem;
 }
+
+.navbarServiceDetails{
+  padding: 2rem 2rem;
+}
+
+
+.serviceNameNavbar{
+  font-size: 1.5rem;
+}
+
+.serviceDescriptionNavbar{
+  font-size: 14px;
+  line-height: 22px;
+}
+.serviceList{
+  padding-left: 0rem;
+}
+.serviceListText{
+  font-size: 1rem;
+}
+
+.makeADivider{
+  border-right: 1px solid #B2E8C1;
+}
 /* Mobile responsive */
 
 /*  XX-Large devices (larger desktops, 1400px and up) */
@@ -929,6 +962,13 @@
   .aboutUsCardMain2{
     left: 12rem;
     top: 3rem;
+  }
+
+  .padMeLeft{
+    padding-left: 2rem;
+  }
+  .padMeRight{
+    padding-right: 3rem;
   }
   .careerColToDel{
     display: none;
@@ -1663,7 +1703,7 @@
   }
   .homeStripe{
     padding: 1rem;
-    font-size: 14px;
+    font-size: 10px;
   }
   .heroContent{
     margin-left: 1rem;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { home_pattern, logo } from '../assets'
-import { navLinks, services } from '../constants'
+import { navLinks, navLinks2, services, servicesData } from '../constants'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaArrowAltCircleRight } from 'react-icons/fa'
 import { RxDividerVertical } from "react-icons/rx";
@@ -37,7 +37,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [showServices, setShowServices] = useState(false)
   const [showServiceType, setShowServiceType] = useState("Digital Transformation")
-
+  const [showServiceDetail, setShowServiceDetail] = useState("")
   const onClose = () => {
     setOpen(false);
   };
@@ -47,7 +47,9 @@ const Navbar = () => {
     "Digital Transformation": (
       <div className="flex flex-col mt-6">
          {services["digital-transformation"].map((item,i)=>(
-          <div className="dropNavItem">
+          <div className="dropNavItem cursor-pointer text-[#737373] hover:text-[#50c17b] transition-all duration-300"
+           onMouseEnter={()=>setShowServiceDetail(item)}
+          >
             {item}
           </div>
          ))}
@@ -57,7 +59,9 @@ const Navbar = () => {
     "Digital Marketing": (
       <div className="flex flex-col mt-6">
          {services["digital-marketing"].map((item,i)=>(
-          <div className="dropNavItem">
+          <div className="dropNavItem cursor-pointer text-[#737373] hover:text-[#50c17b] transition-all duration-300"
+          onMouseEnter={()=>setShowServiceDetail(item)}
+          >
             {item}
           </div>
          ))}
@@ -67,7 +71,9 @@ const Navbar = () => {
     "Recruitment Upsurge": (
       <div className="flex flex-col mt-6">
          {services["recruitment-upsurge"].map((item,i)=>(
-          <div className="dropNavItem">
+          <div className="dropNavItem cursor-pointer text-[#737373] hover:text-[#50c17b] transition-all duration-300"
+          onMouseEnter={()=>setShowServiceDetail(item)}
+          >
             {item}
           </div>
          ))}
@@ -76,7 +82,6 @@ const Navbar = () => {
   }
 
   const onClick = (e) => {
-    console.log('click ', e);
     navigate(`/our-services/${e.keyPath[0]}`)
     setOpen(false)
   };
@@ -123,24 +128,38 @@ const Navbar = () => {
         onMouseLeave={()=>setShowServices(false)}
         className="absolute shadow-lg hover:shadow-xl transform  transition-all duration-300 desktopNavDrop w-full h-[38vh] bg-white top-[3.6rem]">
             <Row className="h-full">
-              <Col xl={6} lg={6}>
+              <Col xl={6} lg={8} md={8} className="makeADivider padMeLeft">
                 <div className="flex w-full h-full flex-col justify-around">
                    <div className='navDropTitle justify-between flex cursor-pointer hover:text-[#50c17b] transition-all duration-300' onMouseEnter={()=>setShowServiceType("Digital Transformation")}>
                    <Link to={'/our-services/digital-transformation'}>Digital Transformation</Link>
-                   <IoIosArrowForward className='ml-[3px] mt-1'/>
+                   <IoIosArrowForward className='mr-[2rem] mt-1'/>
                    </div>
                    <div className='navDropTitle justify-between flex cursor-pointer hover:text-[#50c17b] transition-all duration-300' onMouseEnter={()=>setShowServiceType("Digital Marketing")}>
                    <Link to={'/our-services/digital-marketing'}>Digital Marketing</Link>
-                   <IoIosArrowForward className='ml-[3px] mt-1'/>
+                   <IoIosArrowForward className='mr-[2rem] mt-1'/>
                    </div>
                    <div className='navDropTitle justify-between flex cursor-pointer hover:text-[#50c17b] transition-all duration-300' onMouseEnter={()=>setShowServiceType("Recruitment Upsurge")}>
                    <Link to={'/our-services/recruitment-upsurge'}>Recruitment Upsurge</Link>
-                   <IoIosArrowForward className='ml-[3px] mt-1'/>
+                   <IoIosArrowForward className='mr-[2rem] mt-1'/>
                    </div>
                 </div>
               </Col>
-              <Col xl={18} lg={18}>
-                {getServiceList[showServiceType]}
+              <Col xl={6} lg={8} md={8} className="makeADivider">
+                <div className='serviceList'>
+                  <div className='serviceListText'>
+                   {getServiceList[showServiceType]}
+                  </div>
+                </div>
+              </Col>
+              <Col xl={12} lg={8} md={8} className="padMeRight">
+               <div className="navbarServiceDetails">
+                <div className="serviceNameNavbar text-[#7BABED]">
+                    {showServiceDetail}
+                  </div>
+                  <div className="serviceDescriptionNavbar text-[#737373] mt-4">
+                    {servicesData[showServiceDetail]}
+                  </div>
+               </div>
               </Col>
             </Row>
         </div>
@@ -169,7 +188,7 @@ const Navbar = () => {
         <div className='w-full flex justify-end'>
           <IoMdClose className='mr-5 text-2xl text-black' onClick={()=>setOpen(false)}/> 
         </div>
-        {navLinks.map((link,i)=>(
+        {navLinks2.map((link,i)=>(
             <div className="ml-2 flex flex-col">
               <Link to={link.path}
               onClick={()=>setOpen(false)}

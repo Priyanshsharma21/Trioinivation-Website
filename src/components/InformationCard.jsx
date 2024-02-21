@@ -1,5 +1,6 @@
 import { Col, Divider, Row } from 'antd'
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const InformationCard = ({title, description, cardList, bgCol, leafImg}) => {
   return (
@@ -7,12 +8,18 @@ const InformationCard = ({title, description, cardList, bgCol, leafImg}) => {
     style={{backgroundColor: bgCol}}
     >
     <img className='absolute homeCardInfoLeaf' src={leafImg} alt="leafDesign" />
-    <div className="text-center">
+    <motion.div
+     whileInView={{y:[100,50,0], opacity:[0,0,1]}}
+      transition={{duration:0.5}}
+    className="text-center">
         <div className="infoCardTitle text-normal">{title}</div>
         <div className="infoCardDesc mt-5 text-[#737373]">{description}</div>
-    </div>
+    </motion.div>
 
-    <section className='infoCardSection'>
+    <motion.div
+    whileInView={{y:[100,50,0], opacity:[0,0,1]}}
+      transition={{duration:1}}
+    className='infoCardSection'>
         <Row gutter={[16, 16]}>
         {cardList.map((item,i)=>(
             <>
@@ -30,7 +37,7 @@ const InformationCard = ({title, description, cardList, bgCol, leafImg}) => {
             </>
         ))}
         </Row>
-    </section>
+    </motion.div>
     </div>
   )
 }

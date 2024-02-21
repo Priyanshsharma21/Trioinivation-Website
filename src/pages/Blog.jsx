@@ -10,6 +10,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import { FaRobot } from "react-icons/fa";
 import { TiGroupOutline } from "react-icons/ti";
 import { GoDotFill } from 'react-icons/go'
+import { motion } from 'framer-motion'
 
 export const blogCategory = [
   {
@@ -83,39 +84,52 @@ const Blog = () => {
         <section className="latestBlog">
           <Row>
             <Col xl={12} lg={12} md={24} sm={24} xs={24}>
-              <div className="blogLatestHeading font-normal text-[#262626]">
-                Latest from us! 
-              </div>
-              <div className="blogLatestImg">
-                <img src={blogLists[0].banner} className="blogLatestImage rounded-lg w-full h-full" alt={blogLists[0].title} /> 
-              </div>
+              <motion.div
+               whileInView={{x:[-100,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+              transition={{duration:0.5}} 
+              >
+                <div className="blogLatestHeading font-normal text-[#262626]">
+                  Latest from us! 
+                </div>
+                <div className="blogLatestImg">
+                  <img src={blogLists[0].banner} className="blogLatestImage rounded-lg w-full h-full" alt={blogLists[0].title} /> 
+                </div>
+              </motion.div>
             </Col>
             <Col xl={12} lg={12} md={24} sm={24} xs={24} className="latestBlogContent">
-              <div className="font-medium px-4 py-2 domainBubble rounded-lg bg-[#7BABED] hover:bg-[#89b5f3] hover:shadow-xl transform  transition-all duration-300 goodReadTime text-[#FFFFFF]">
-                {blogLists[0].domain}
-              </div>
-              <div className="flex mt-5">
-                <div className="font-medium goodReadTime text-[#737373]">
-                  {blogLists[0].date}
+              <motion.div
+               whileInView={{x:[100,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+              transition={{duration:0.5}} 
+              >
+                <div className="font-medium px-4 py-2 domainBubble rounded-lg bg-[#7BABED] hover:bg-[#89b5f3] hover:shadow-xl transform  transition-all duration-300 goodReadTime text-[#FFFFFF]">
+                  {blogLists[0].domain}
                 </div>
-                <GoDotFill className="font-medium ml-2 sm:ml-3 goodReadTime text-[#737373]"/>
-                <div className="ml-3 font-medium goodReadTime text-[#737373]">
-                  {blogLists[0].readTime} min read
+                <div className="flex mt-5">
+                  <div className="font-medium goodReadTime text-[#737373]">
+                    {blogLists[0].date}
+                  </div>
+                  <GoDotFill className="font-medium ml-2 sm:ml-3 goodReadTime text-[#737373]"/>
+                  <div className="ml-3 font-medium goodReadTime text-[#737373]">
+                    {blogLists[0].readTime} min read
+                  </div>
                 </div>
-              </div>
-              <div className="blogTitleLatest blogLatestHeading text-[#262626]">
-                {blogLists[0].title}
-              </div>
-              <div className="blogDescLatest text-[#737373]">
-                {blogLists[0].description}
-              </div>
+                <div className="blogTitleLatest blogLatestHeading text-[#262626]">
+                  {blogLists[0].title}
+                </div>
+                <div className="blogDescLatest text-[#737373]">
+                  {blogLists[0].description}
+                </div>
+              </motion.div>
             </Col>
           </Row>
         </section>
 
 
         <section className="blogCardsSection bg-[#FAFAFA]">
-          <div className="blogCardTop flex items-center justify-between">
+          <motion.div
+          whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+          transition={{duration:0.5}}
+          className="blogCardTop flex items-center justify-between">
             <div className="blogTitleText">Explore more blogs</div>
             <div className="flex categoryContainer">
               {blogCategory.map((item,i)=>(
@@ -131,11 +145,14 @@ const Blog = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="blogCards">
+          <motion.div
+           whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+            transition={{duration:1}}
+          className="blogCards">
             <BlogCards blogs={blogs}/>
-          </div>
+          </motion.div>
         </section>
     </div>
   )
