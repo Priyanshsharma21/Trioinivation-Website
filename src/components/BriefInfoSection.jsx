@@ -9,7 +9,7 @@ const BriefInfoSection = ({title, description1, description2, titleMain,customCl
     <Row>
       <Col xl={12} lg={12} md={24} sm={24} xs={24}>
         <motion.div
-        whileInView={{x:[-100,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+        whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
         transition={{duration:0.5}}  
          className="flex flex-col">
           <div>
@@ -26,7 +26,7 @@ const BriefInfoSection = ({title, description1, description2, titleMain,customCl
       </Col>
       <Col xl={12} lg={12} md={24} sm={24} xs={24}>
           <motion.div
-          whileInView={{x:[100,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+          whileInView={{x:[2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
           transition={{duration:0.5}} 
            className='subHeading2'>
            {description2}

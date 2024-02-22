@@ -24,10 +24,10 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (count >= 100 && window.location.pathname === '/') {
+    if (count >= 100) {
       setPreLoader(false);
       clearInterval();
-      navigate('/');
+      navigate(window.location.pathname);
     }
   }, [count]);
 
@@ -35,10 +35,10 @@ const App = () => {
     <div className="app w-full">
       {preLoader ? (
         <div className="preloader w-full h-screen flex flex-col justify-center items-center">
-        <div className="w-full h-screen flex flex-col bg-[#7BABED]">
+        <div className="w-full h-screen preLoaderBG flex flex-col ">
           <div className="w-full h-screen flex flex-col justify-center items-center">
             <img src={logo2} alt="website logo" className='z-100 preLoaderLogoImg' />
-            <motion.h1 className='text-[2rem] absolute top-2 right-5 text-[#28282834] font-bold'>{count}</motion.h1>
+            <motion.h1 className='counterBg rounded-full absolute top-2 right-5 text-[#28282834] font-bold'>{count}</motion.h1>
             <div className='loader' />
           </div>
         </div>

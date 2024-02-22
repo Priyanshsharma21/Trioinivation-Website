@@ -38,8 +38,8 @@ const Testimonials = () => {
                     <Row>
                         <Col xl={6} lg={10} md={24} sm={24} xs={24}>
                             <motion.div
-                            whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
-                            transition={{duration:1}}       
+                           whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+                            transition={{duration:0.5}}
                             className="testimonialListsContainer">
                                 {testimonialList.map((item,i)=>(
                                     <div 
@@ -67,8 +67,8 @@ const Testimonials = () => {
                         </Col>
                         <Col xl={18} lg={14} md={24} sm={24} xs={24}>
                             <motion.div
-                            whileInView={{x:[200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
-                            transition={{duration:1}}
+                           whileInView={{y:[100,50,0], opacity:[0,0,1], filter: ["blur(10px)", "blur(0px)"]}}
+                            transition={{duration:0.5}}
                             className="textCardMain h-full bg-[#F1F6FD] rounded-lg shadow-lg">
                                 <div className="testMark absolute">
                                     <img src={testMark} alt="testMark" />

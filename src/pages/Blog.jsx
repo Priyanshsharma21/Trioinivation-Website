@@ -85,7 +85,7 @@ const Blog = () => {
           <Row>
             <Col xl={12} lg={12} md={24} sm={24} xs={24}>
               <motion.div
-               whileInView={{x:[-100,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+               whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
               transition={{duration:0.5}} 
               >
                 <div className="blogLatestHeading font-normal text-[#262626]">
@@ -98,7 +98,7 @@ const Blog = () => {
             </Col>
             <Col xl={12} lg={12} md={24} sm={24} xs={24} className="latestBlogContent">
               <motion.div
-               whileInView={{x:[100,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+               whileInView={{x:[2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
               transition={{duration:0.5}} 
               >
                 <div className="font-medium px-4 py-2 domainBubble rounded-lg bg-[#7BABED] hover:bg-[#89b5f3] hover:shadow-xl transform  transition-all duration-300 goodReadTime text-[#FFFFFF]">

@@ -56,7 +56,7 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
             )}
             {showNavigation && (
                 <motion.div
-                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
                 transition={{duration:1}}
                 className="heroNavigation flex">
                     <div className=''>Home</div>
@@ -71,7 +71,7 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
             )}
             {showNavigation && (
                 <motion.div
-                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
                 transition={{duration:1}}
                 className="heroNavigationText">
                     {navName2 ? navName2 : navName}
@@ -79,7 +79,7 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
             )}
             {showTitle1 && (
                 <motion.div
-                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
                 transition={{duration:1}}
                 className="heroHeading">
                     <span className="heroHeadingMain text-[#7BABED]">Connect with us</span> to grow your business with ease
@@ -88,7 +88,7 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
 
             {title2 && (
                 <motion.div
-                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
                 transition={{duration:1}}
                 className="heroHeading heroHeading2 mt-1">
                     {title2} <span className="heroHeadingMain text-[#7BABED]">{title2HighlightPart}</span>
@@ -97,7 +97,7 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
             
             {showSubTitle && (
                 <motion.div
-                  whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                  whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
                   transition={{duration:1}}
                 className="subHeading mt-5">
                     Transforming visions into digital realities. Our comprehensive services encompass digital transformation, marketing prowess, and talent solutions, ensuring your success in a dynamic world.
@@ -106,7 +106,7 @@ const HeroBanner = ({showArrow, showBtn, showTitle1, showSubTitle, heroImg, show
               
             {showBtn && (
                 <motion.div
-                whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+                whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
                 transition={{duration:1}}
                 className="heroActionBtns mt-6 flex">
                   <Link to="/contact" className="contactButton heroBtnText font-semibold flex items-center bg-[#41AE6A] hover:text-white hover:bg-[#50c17b] text-white">

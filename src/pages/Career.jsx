@@ -24,7 +24,7 @@ const Career = () => {
         <Row>
           <Col xl={6} lg={8} md={24} sm={24} xs={24} className="flex justify-center items-center careerColToDel">
             <motion.div
-            whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+            whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
             transition={{duration:0.5}}    
             >
               <img src={career1} alt="career1" />
@@ -56,7 +56,7 @@ const Career = () => {
           </Col>
           <Col xl={6} lg={8} md={24} sm={24} xs={24} className="flex justify-center items-center careerColToDel">
           <motion.div
-            whileInView={{x:[200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+            whileInView={{x:[2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
             transition={{duration:0.5}}    
             >
               <img src={career4} alt="career4" />

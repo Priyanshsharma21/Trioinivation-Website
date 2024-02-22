@@ -39,7 +39,7 @@ const About = () => {
 
         <section className="aboutUsSec2">
           <motion.div
-           whileInView={{x:[-200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+           whileInView={{x:[-2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
            transition={{duration:0.5}}    
           >
             <Row>
@@ -61,7 +61,7 @@ const About = () => {
             </Row>
           </motion.div>
           <motion.div
-          whileInView={{x:[200,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
+          whileInView={{x:[2,0], opacity:[0,1],filter: ["blur(10px)", "blur(0px)"]}}
            transition={{duration:0.5}}    
           className='mt-16 mb-16'>
             <Row>
