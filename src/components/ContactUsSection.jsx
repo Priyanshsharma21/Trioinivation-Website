@@ -28,19 +28,23 @@ const ContactUsSection = () => {
       const socialMediaLinks = [
         {
             title : "Twitter",
-            icon : <FaXTwitter className='text-black cursor-pointer '/>
+            icon : <FaXTwitter className='text-black cursor-pointer '/>,
+            path : "",
         },
         {
             title : "Linkedin",
-            icon : <FaLinkedinIn className='text-black cursor-pointer'/>
+            icon : <FaLinkedinIn className='text-black cursor-pointer'/>,
+            path : "",
         },
         {
             title : "Facebook",
-            icon : <FaFacebookF className='text-black cursor-pointer'/>
+            icon : <FaFacebookF className='text-black cursor-pointer'/>,
+            path : "",
         },
         {
             title : "Instagram",
-            icon : <FaInstagram className='text-black cursor-pointer'/>
+            icon : <FaInstagram className='text-black cursor-pointer'/>,
+            path : "",
         },
     ]
   return (
@@ -89,11 +93,13 @@ const ContactUsSection = () => {
                         <div className="text-white font-normal alsoAvil">Also available on:</div>
                         <div className='flex mt-2'>
                             {socialMediaLinks.map((item,i)=>(
-                                <div 
+                                <a
+                                href={item.path} 
+                                target='_blank'
                                 style={{marginLeft : i===0 ? 0 : 10}}
                                 className="bg-white p-2 rounded-full hover:bg-[#ffffffac] cursor-pointer hover:shadow-xl transform  transition-all duration-300">
                                     {item.icon}
-                                </div>
+                                </a>
                             ))}
                         </div>
                     </div>

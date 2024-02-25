@@ -25,19 +25,23 @@ const BlogDetails = () => {
   const socialMediaLinks = [
     {
         title : "Twitter",
-        icon : <FaXTwitter className='text-white '/>
+        icon : <FaXTwitter className='text-white '/>,
+        path : "",
     },
     {
         title : "Linkedin",
-        icon : <FaLinkedinIn className='text-white'/>
+        icon : <FaLinkedinIn className='text-white'/>,
+        path : "",
     },
     {
         title : "Facebook",
-        icon : <FaFacebookF className='text-white'/>
+        icon : <FaFacebookF className='text-white'/>,
+        path : "",
     },
     {
         title : "Instagram",
-        icon : <FaInstagram className='text-white'/>
+        icon : <FaInstagram className='text-white'/>,
+        path : "",
     },
 ]
 
@@ -92,7 +96,9 @@ const BlogDetails = () => {
                                 <motion.div
                                 style={{marginLeft : i===0 ? 0 : 10}}
                                 className="p-2 sm:p-3 bg-[#41AE6A] text-[#ffffff] rounded-full hover:bg-[#4fb977] cursor-pointer hover:shadow-xl transform  transition-all duration-300">
+                                    <a href={item.path} target="_blank">
                                     {item.icon}
+                                    </a>
                                 </motion.div>
                             ))}
                 </div>

@@ -51,7 +51,7 @@ const HomeOurService = () => {
                   <div className="homeCardDesc mt-4 text-center text-[#737373]">
                     {item.description}
                   </div>
-                  <Link to={item.path} className="homeCardIcon flex justify-center items-center text-[#7BABED] hover:text-white mt-6">
+                  <Link to={item.path} className="homeCardIcon flex justify-center items-center text-[#7BABED] hover:text-[#95b5e0] mt-6">
                     <div>Learn more</div>
                     <IoIosArrowForward className='ml-1 items-center'/>
                   </Link>

@@ -17,19 +17,23 @@ const Footer = () => {
   const socialMediaLinks = [
     {
         title : "Twitter",
-        icon : <FaXTwitter className='text-white'/>
+        icon : <FaXTwitter className='text-white'/>,
+        path : "",
     },
     {
         title : "Linkedin",
-        icon : <FaLinkedinIn className='text-white'/>
+        icon : <FaLinkedinIn className='text-white'/>,
+        path : "",
     },
     {
         title : "Facebook",
-        icon : <FaFacebookF className='text-white'/>
+        icon : <FaFacebookF className='text-white'/>,
+        path : "",
     },
     {
         title : "Instagram",
-        icon : <FaInstagram className='text-white'/>
+        icon : <FaInstagram className='text-white'/>,
+        path : "",
     },
 ]
 
@@ -64,14 +68,17 @@ const handleSubmit = ()=>{
               <div className="socialMedia ml-8">
                 <div className='text-black font-medium mb-5'>Also on:</div>
                 {socialMediaLinks.map((item,i)=>(
-                  <div className="flex items-center mt-3">
+                  <a
+                  href={item.path}
+                  target='_blank'
+                  className="flex items-center mt-3">
                     <div className="bg-[#7BABED] p-1 rounded-full">
                       {item.icon}
                     </div>
                     <div className='footerItemTextSocialMedia ml-2 font-normal text-[#525252]'>
                       {item.title}
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>

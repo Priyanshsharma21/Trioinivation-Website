@@ -59,7 +59,7 @@ export const navLinks2 = [
 export const services = {
     "digital-transformation" : ["Frontend Development", "Backend Development", "Mobile App Development", "Support Services", "Cloud", "Testing", "Graphic Design"],
 
-    "digital-marketing" : ["SEO", "Social Media Management", "Google Ads", "Content Creation", "Testing"],
+    "digital-marketing" : ["SEO", "Social Media Management", "Google Ads", "Content Creation", "Video Editing", "Testing"],
 
     "recruitment-upsurge" : ["Senior Middle Hiring", "Global Sourcing", "Diversity Hiring"]
 }
@@ -421,6 +421,11 @@ export const digitalMarketingData = [
         banner : "https://image.lexica.art/full_webp/f5a57874-e56b-4a64-bfc2-d8dcdbe4f70e"
     },
     {
+        title : "Video Editing",
+        description : "Elevate your visual content with our professional video editing services. Whether you need promotional videos, social media clips, or full-length features, our team of expert editors will transform your raw footage into stunning, polished videos. We use the latest editing techniques and software to bring your vision to life, delivering high-quality videos that captivate your audience and convey your message effectively.",
+        banner : "https://image.lexica.art/full_webp/0118836a-9692-4c08-9685-cb76d7fec7c9",
+    },
+    {
         title: "Testing",
         description: "Our testing services ensure that your digital marketing campaigns are performing optimally. We conduct A/B testing, performance testing, and user testing to identify areas for improvement and optimize your campaigns for better results.",
         banner : "https://image.lexica.art/full_webp/a073bd1f-1409-41ad-8586-229308b82d6a"
@@ -489,13 +494,13 @@ export const additionalServices = [
         title: "Consulting Services",
         description: "Provide expert guidance and insights to clients on digital transformation strategies, helping them leverage technology for business growth and efficiency.",
         bannerImg : ru,
-        path : "/our-services/digital-transformation"
+        path : "/our-services/recruitment-upsurge"
     },
     {
         title: "Quality Assurance",
         description: "Ensure the reliability, security, and performance of digital solutions through comprehensive testing and quality assurance processes, delivering high-quality products to clients.",
         bannerImg : dm,
-        path : "/our-services/digital-transformation"
+        path : "/our-services/digital-marketing"
     },
     {
         title: "User Experience Design",
@@ -521,6 +526,7 @@ export const servicesData = {
     "Social Media Management": "We offer comprehensive social media management services to help you build and maintain a strong presence on popular social media platforms. From content creation to community engagement, we handle all aspects of your social media strategy.",
     "Google Ads": "Our Google Ads services help you reach your target audience and drive relevant traffic to your website. We create and manage Google Ads campaigns that are optimized for maximum ROI and conversions.",
     "Content Creation": "We specialize in creating high-quality and engaging content that resonates with your audience. From blog posts and articles to videos and infographics, we produce content that drives traffic, leads, and sales.",
+    "Video Editing" : "Elevate your visual content with our professional video editing services. Whether you need promotional videos, social media clips, or full-length features, our team of expert editors will transform your raw footage into stunning, polished videos. We use the latest editing techniques and software to bring your vision to life, delivering high-quality videos that captivate your audience and convey your message effectively.",
     "Senior Middle Hiring": "Our senior middle hiring services focus on recruiting top-tier talent for mid-level and senior positions within your organization. We leverage our extensive network and industry expertise to identify and attract qualified candidates who meet your specific requirements.",
     "Global Sourcing": "Our global sourcing services enable you to expand your talent pool beyond local boundaries. We leverage our global network and resources to source qualified candidates from around the world, ensuring that you have access to the best talent, regardless of location.",
     "Diversity Hiring": "We are committed to promoting diversity and inclusion in the workplace. Our diversity hiring services help you attract and retain a diverse workforce, ensuring that your organization benefits from a range of perspectives and experiences."

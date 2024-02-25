@@ -25,9 +25,10 @@
 }
 
 .preLoaderBG{
-  background: linear-gradient(300deg,#264796,#8EB6EE,#B2E8C1);
+  background: linear-gradient(300deg,#3b5ba7,#8EB6EE,#B2E8C1, #a33ba7);
+  background: linear-gradient(300deg,#3D5A80,#8EB6EE,#B2E8C1, #F5CB5C);
   background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+  animation: gradient-animation 3s ease infinite;
 }
 
 @keyframes gradient-animation {
