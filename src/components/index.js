@@ -7,7 +7,8 @@ import ServicesCards from "./ServicesCards"
 import Testimonials from "./Testimonials"
 import HomeOurService from "./HomeOurService"
 import ScrollToTop from "./ScrollToTop"
-
+import BackgroundGradientAnimation from "./BackgroundGradientAnimation"
+ 
 export {
     Navbar,
     HeroBanner,
@@ -17,5 +18,6 @@ export {
     ServicesCards,
     Testimonials,
     HomeOurService,
-    ScrollToTop
+    ScrollToTop,
+    BackgroundGradientAnimation
 }

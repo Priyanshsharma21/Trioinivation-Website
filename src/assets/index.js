@@ -35,6 +35,7 @@ import swiperBg from './swiperBg.png'
 import blogLeftFlower from './blogLeftFlower.png'
 import blogRightFlower from './blogRightFlower.png'
 import homeBlogSection from './homeBlogSection.png'
+import logoWhite from './logoWhite.png'
 
 export {
     logo,
@@ -73,5 +74,6 @@ export {
     swiperBg,
     blogLeftFlower,
     blogRightFlower,
-    homeBlogSection
+    homeBlogSection,
+    logoWhite
 }

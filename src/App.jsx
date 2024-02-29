@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Navbar, ScrollToTop } from './components';
+import { BackgroundGradientAnimation, Navbar, ScrollToTop } from './components';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { Home, Blog, Contact, About, BlogDetails, Career, RecruitmentUpsurge, DigitalTransformation, DigitalMarketing } from './pages';
 import Footer from './components/Footer';
@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { logo, logo2 } from './assets';
+import { logo, logo2,logoWhite } from './assets';
 
 const App = () => {
   const [preLoader, setPreLoader] = useState(true);
@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCount((prevCount) => prevCount + 5);
+      setCount((prevCount) => prevCount + 2);
     }, 100);
 
     return () => clearInterval(timer);
@@ -34,15 +34,13 @@ const App = () => {
   return (
     <div className="app w-full">
       {preLoader ? (
-        <div className="preloader w-full h-screen flex flex-col justify-center items-center">
-        <div className="w-full h-screen preLoaderBG flex flex-col ">
+        <BackgroundGradientAnimation>
           <div className="w-full h-screen flex flex-col justify-center items-center">
-            <img src={logo2} alt="website logo" className='z-100 preLoaderLogoImg' />
-            <motion.h1 className='counterBg rounded-full absolute top-2 right-5 text-[#28282834] font-bold'>{count}</motion.h1>
+            <img src={logoWhite} alt="website logo" className='z-100 preLoaderLogoImg' />
+            <motion.h1 className='counterBg rounded-full absolute top-2 right-5 text-[#ffffffc5] font-bold'>{count}</motion.h1>
             <div className='loader' />
           </div>
-        </div>
-        </div>
+        </BackgroundGradientAnimation>
       ) : (
         <div className="w-full main_wrapper z-0">
           <div className="flex justify-center">
